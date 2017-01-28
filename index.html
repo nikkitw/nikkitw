@@ -1,0 +1,251 @@
+	<!DOCTYPE HTML> 
+	<html lang="zh-TW"> 
+	<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+	<link rel="icon" href="favicon.ico" type="image/x-icon" /> 
+	<meta name="renderer" content="webkit"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<title>奇迹暖暖搭配器</title> 
+	<link rel="stylesheet" href="bootstrap/bootstrap.min.css"> 
+	<link rel="stylesheet" href="onekeystrategy.css"> 
+	<link rel="stylesheet" href="style.css"> 
+	<link rel="stylesheet" type="text/css" href="ui.css"> 
+	<link rel="stylesheet" type="text/css" href="mobileui.css" media="only screen and (max-width: 650px)"> 
+		<script type='text/javascript' charset="UTF-8" src='data/notice.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='jquery.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='jquery.freezeheader.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src="bootstrap/bootstrap.min.js"></script> 
+		<script type='text/javascript' charset="UTF-8" src="tool.js"></script> 
+		<script type='text/javascript' charset="UTF-8" src='data/wardrobe.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='scoring.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='data/levels.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='data/flist.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='model.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='data/pattern.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='ui.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='nikki.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='onekeystrategy_lan.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='onekeystrategy.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='clock.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='sharewardrobe.js'></script> 
+	</head> 
+	<body> 
+	<div class='title'> 
+	奇跡暖暖線上工具 by <a href="http://weibo.com/u/3597140883">@黑的昇華</a> modified from 
+	<a href="http://ivangift.github.io/nikkiup2u3/"> ivangift's github</a><br/> 
+	<div class="" role="alert">國內鏡像訪問位址<a href="http://qjnn.gift">http://qjnn.gift</a>, 原地址<a href="http://seal100x.github.io/nikkiup2u3/">http://seal100x.github.io/nikkiup2u3</a></div> 
+	衣櫃、設計圖更新：by 翡翠<br/> 
+	關卡資訊更新：by 兔子<br/> 
+	繁體化：by 莫默墨陌<br/> 
+	<div id="share-link"></div> 
+	</div> 
+	<div id="StrategyInfo"></div> 
+	<div class='top'> 
+	<div class="announcement"> 
+	<div id="update_history"> 
+		2016.12更新<br/> 
+		12.01開放使用<br/> 
+		12.09新增「雪姬」套裝<br/>
+		12.16新增「鹹魚味道」套裝<br/>
+		12.31修改紅斗篷為髮飾、聽診器為項鍊；八、九章節已開放<br/>
+		<br/>
+	</div>
+		溫馨提醒：<br/>	1.因台版進度落後陸版，有些過關提示有「別穿外套！但新外套可以」之類，請無視「新外套可以」，因為不一定適用台版！<br/>
+		2.此搭配器僅有台版服裝，但是修改的過程中，可能會眼花誤刪服裝，若有發現被誤刪的服裝可以告知！<br/>
+		<hr/>
+		特別感謝：<b>玥珞</b>對搭配器的貢獻<br/>
+		1.台陸版服裝名稱變更<br/>
+		2.TAG名稱變更<br/>
+		3.新增被誤刪的服裝<br/>
+		4.修改飾品順序(閱讀更方便)<br/>
+		<hr/>
+		聯絡處：<br/>
+		<a href="https://www.facebook.com/groups/223872028066671/" target="_blank">FB社團</a>、<a href="https://home.gamer.com.tw/creationDetail.php?sn=3432154" target="_blank">巴哈</a>、E-mail：service000@nikkitw.esy.es
+		<br/>
+		<hr/>
+		2017.01更新<br/>
+		01.01衣櫃大更新<br/>
+		01.03新增白衣惡魔、狡黠天使<br/>
+		01.05新增第八、九章套裝；聯盟第三章開放；新增聯盟第三章套裝；修改薄荷絨帽為頭飾<br/>
+		01.08修正部分「發」改成「髮」<br/>
+		01.09修正9-5關卡；修正部分服飾名稱<br/>	01.17新增謎之屋「雲禪天塔」裡的服裝；新增「福祉鈴喵」、「羈絆嬌犬」、「竹夜歌」、「花月謠」套裝<br/>	01.19新增「萌獸年年」、「煙竹伴雪」部件；新增「霓羽紅妝」、「巧克力物語」、「躍動少女」及服裝店其他部件<br/>
+		01.20新增「鴻運春桃」、「踏雪尋梅」；新增簽到部件<br/>
+		01.26新增「夢幻大使對比工具」<br/>
+		<br/>
+	<a href="#" id="show_history">查看歷史更新</a><br/>
+
+	</div><!-- announcement --> 
+			<div class="fliter">
+				距離搭配賽結束還有<span id="showTime">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="biguse.html" target="_blank">夢幻大使對比工具</a>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="http://gjnntw.weebly.com/introduce.html" target="_blank">使用介紹</a>
+<!--
+				<a href="introduce.html" target="_blank">配裝器使用介紹(臨時版, 圖多慎點)</a>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="data/FAQ.html" target="_blank">常見問題FAQ</a>
+				<button style="display:none" class="btn btn-sm btn-default" id="sharewardrobe">分享衣櫃</button>&nbsp;&nbsp;|&nbsp;&nbsp;
+				<button style="display:none" class="btn btn-sm btn-default" id="aaa" onclick="getWardrobe()">同步分享的衣櫃</button>
+				<br/>
+-->
+				<div id='filtersTop'>
+					<div class="btn-group">
+						<select id="theme-fliter" onChange="reDrawTheme()" class="btn btn-default"></select>
+						<select id="theme" onChange="changeTheme()" class="btn btn-default"></select>
+						<button id="onekey" class="btn btn-default">一鍵攻略</button>
+					</div>
+					<div id="tagInfo"></div>
+					<div id="skillInfo"></div>
+					<div id="categoryFInfo"></div>
+					<div id="hintInfo"></div>
+				</div>
+				<div class="fliter_form_div">
+					<form name="filter_form" class="form-inline">
+						<div class="fliter_form_div_left">
+							<div class='facet'>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="simple" value="1"/> 簡約</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="simple" value="-1"/> 華麗</label>
+									<input class="btn-sm" placeholder="權重" type="text" id="simpleWeight" name="simpleWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-link btn-sm 1d778" id="simple1d778">微笑+飛吻</span>
+									<span class="highscore-link btn-sm 1d27" id="simple1d27">微笑</span>
+									<span class="highscore-rank btn-sm" id="simplerank"></span>
+								</div>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="cute" value="1"/> 可愛</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="cute" value="-1"/> 成熟</label>
+									<input class="btn-sm" placeholder="權重" type="text" id="cuteWeight" name="cuteWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-link btn-sm 1d778" id="cute1d778">微笑+飛吻</span>
+									<span class="highscore-link btn-sm 1d27" id="cute1d27">微笑</span>
+									<span class="highscore-rank btn-sm" id="cuterank"></span>
+								</div>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="active" value="1"/> 活潑</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="active" value="-1"/> 優雅</label>
+									<input class="btn-sm" placeholder="權重" type="text" id="activeWeight" name="activeWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-link btn-sm 1d778" id="active1d778">微笑+飛吻</span>
+									<span class="highscore-link btn-sm 1d27" id="active1d27">微笑</span>
+									<span class="highscore-rank btn-sm" id="activerank"></span>
+								</div>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="pure" value="1"/> 清純</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="pure" value="-1"/> 性感</label>
+									<input class="btn-sm" placeholder="權重" type="text" id="pureWeight" name="pureWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-link btn-sm 1d778" id="pure1d778">微笑+飛吻</span>
+									<span class="highscore-link btn-sm 1d27" id="pure1d27">微笑</span>
+									<span class="highscore-rank btn-sm" id="purerank"></span>
+								</div>
+								<div class="weightContainer" role="group" data-toggle="buttons">
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="cool" value="1"/> 清涼</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="cool" value="-1"/> 保暖</label>
+									<input class="btn-sm" placeholder="權重" type="text" id="coolWeight" name="coolWeight" value="1" onChange="changeFilter()" />
+									<span class="highscore-link btn-sm 1d778" id="cool1d778">微笑+飛吻</span>
+									<span class="highscore-link btn-sm 1d27" id="cool1d27">微笑</span>
+									<span class="highscore-rank btn-sm" id="coolrank"></span>
+								</div>
+								<div class='weightContainer' id = "tag1Container" role="group" data-toggle="buttons">
+									<input class="btn-sm" placeholder="tag1" type="text" id="tag1" name="tag1" onChange="changeFilter()" />
+									<label class="btn btn-sm btn-default active"><input class="filter-radio" type="radio" name="tag1method" value="add" checked/> 加分</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="tag1method" value="replace"/> 替換</label>
+									<select class="btn-sm" id="tag1base" onChange="changeFilter()">
+										<option>SS</option>
+										<option>S</option>
+										<option>A</option>
+										<option>B</option>
+										<option>C</option>
+									</select>
+									<input class="btn-sm" type="text" id="tag1weight" name="tag1weight" value="1" onChange="changeFilter()" />
+								</div>
+								<div class='weightContainer' id = "tag2Container" role="group" data-toggle="buttons">
+									<input class="btn-sm" placeholder="tag2" type="text" id="tag2" name="tag2" onChange="changeFilter()" />
+									<label class="btn btn-sm btn-default active"><input class="filter-radio" type="radio" name="tag2method" value="add" checked/> 加分</label>
+									<label class="btn btn-sm btn-default"><input class="filter-radio" type="radio" name="tag2method" value="replace"/> 替換</label>
+									<select class="btn-sm" id="tag2base" onChange="changeFilter()">
+										<option>SS</option>
+										<option>S</option>
+										<option>A</option>
+										<option>B</option>
+										<option>C</option>
+									</select>
+									<input class="btn-sm" type="text" id="tag2weight" name="tag2weight" value="1" onChange="changeFilter()" />
+								</div>
+							</div><!-- facet -->
+							<div class="fliter_option clear">
+								<div class="checkbox"><label><input type="checkbox" class="fliter" value="own" checked /> 擁有<span id='inventoryCount'/></label></div>
+								<div class="checkbox"><label><input type="checkbox" class="fliter" value="missing" checked /> 沒有</label></div>
+								<div class="checkbox"><label><input type="checkbox" id="searchResultCheck" onclick="toggleSearchResult()" checked /> 搜索</label></div>
+								<a href="#" class = "showmore" style="display:inline-block;cursor:pointer">↓顯示全部衣服↓</a>
+							</div><!-- fliter_option -->
+						</div>
+						<div class="fliter_form_div_right">
+							<fieldset>
+								<legend>高級選項</legend>
+									<div class="checkbox"><label><input type="checkbox" class="fliter" value="sortbyscore" /> 按分數和id排序</label></div>
+									<div class="checkbox"><label><input type="checkbox" class="fliter" value="balance" /> 均衡權重</label></div>
+									<div class="checkbox"><label><input type="checkbox" class="fliter" value="highscore" /> 高分權重</label></div>
+									<div class="checkbox"><label><input type="checkbox" class="fliter" value="acc9" /> 9件飾品</label></div>
+									<div class="checkbox"><label><input type="checkbox" class="fliter" value="toulan" /> 偷懶模式(測試3)</label></div>
+							</fieldset>
+							<fieldset>
+								<legend>篩選(先點擊顯示全部衣服)</legend>
+									<button  type="button" class="btn btn-xs btn-info front_filter_option" >全部</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >尚缺材料</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >暫不缺材料</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >少女級</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >少女染/進</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >公主級</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >公主染/進</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >店</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >店染/進</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >設計圖</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >設計圖染/進</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >活動</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >贈送/簽到</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >迷之屋限定</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >迷之屋限定染/進</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >3星</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >4星</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >5星</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >套裝部件</button>
+									<button  type="button" class="btn btn-xs btn-default front_filter_option" >新品</button>
+									<button  type="button" class="btn btn-xs btn-success" id="add_all">添加所有顯示的衣服到衣櫃</button>
+							</fieldset>
+						</div>
+					</form>
+				</div><!-- fliter_form_div -->
+			</div><!-- fliter -->
+		</div><!-- top -->
+		<hr>
+		<div id = 'searchResult'>
+			<input type="text" id="searchResultInput" class="btn-sm" placeholder="輸入名字搜索" /><button class="btn btn-default btn-sm" onclick="searchResult()">搜索</button><button class="btn btn-default btn-sm" id="searchResultMode">→衣櫃</button>
+			<div id='searchResultList' width="100%"></div>
+		<hr>
+		</div>
+		<div id = 'shoppingCartContainer'>
+		  推薦穿戴部件  <button class="btn btn-default" style="float:right" onclick="clearShoppingCart()">清空</button>
+		  <div id='shoppingCart' class="table"></div>
+		</div>
+		<hr>
+		<div id = 'category_container'></div>
+		<div id = "clothes" class="table"></div>
+		<div class = "showmore" id= "showmore" isshowmore="1">↓顯示全部衣服↓</div>
+		<div id = "end"></div>
+		<hr>
+		導入批量衣服，請先選擇要導入的類別，然後在文字方塊內輸入編號，用空格、逗號或者換行隔開。不知道編號在哪兒的請點<a href="http://tieba.baidu.com/p/3808711082" target="_blank">這裡</a>
+		<div id = "import">
+		  <select id="importCate" onChange="clearImport()" ></select><br/>
+		  <textarea id="importData" rows=5 style="width:60%" ></textarea>
+		  <button onClick="doImport()">導入</button>
+		</div>
+		<hr>
+		<p>我擁有的服裝 （複製衣櫥文字方塊內容以備份衣櫥）</p>
+		<textarea id="myClothes" rows=10 style="width:60%"></textarea><br/>
+		<p style="width:60%; display:none">衣櫃數量記錄 （複製衣櫥文字方塊內容以備份衣櫥）</p>
+		<textarea id="myClothesNum" rows=10 style="width:60%; display:none"></textarea>
+		<br/>
+		<button onClick="loadCustomInventory()">恢復備份</button>
+		<br/>
+	</body>
+</html>
