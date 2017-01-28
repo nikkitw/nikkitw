@@ -44,13 +44,13 @@ function shareWardrobe() {
 function typeToggleChar(source){
 	if(source  == '髮型')
 		return 'a';
-	if(source  == '連衣裙')
+	if(source  == '連身裙')
 		return 'b';
 	if(source  == '外套')
 		return 'c';
 	if(source  == '上衣')
 		return 'd';
-	if(source  == '下裝')
+	if(source  == '下著')
 		return 'e';
 	if(source  == '襪子')
 		return 'f';
@@ -66,13 +66,13 @@ function typeToggleChar(source){
 	if(source  == 'a')
 		return '髮型';
 	if(source  == 'b')
-		return '連衣裙';
+		return '連身裙';
 	if(source  == 'c')
 		return '外套';
 	if(source  == 'd')
 		return '上衣';
 	if(source  == 'e')
-		return '下裝';
+		return '下著';
 	if(source  == 'f')
 		return '襪子';
 	if(source  == 'g')

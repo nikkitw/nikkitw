@@ -51,9 +51,9 @@ function showStrategy(){
 			if (clothes[i].isF||$.inArray(type,skipCategory)>=0) continue;
 			result[type].push(clothes[i]);
 			if(clothes[i].isSuit != "" 
-				&& type.indexOf("連衣裙") < 0 
+				&& type.indexOf("連身裙") < 0 
 				&& type.indexOf("上衣") < 0 
-				&& type.indexOf("下裝") < 0
+				&& type.indexOf("下著") < 0
 			){
 				var quanzhong = 1;
 				if(type.indexOf("飾品") > 0)

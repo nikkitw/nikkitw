@@ -100,9 +100,9 @@ function showStrategy2(keywords, suits){
 			clothes[i].calc(filters);
 			if (clothes[i].isF||$.inArray(clothes[i].type.type,skipCategory)>=0||clothes[i].sumScore == 0) continue;
 			if (keywords != null 
-				&& (clothes[i].type.type == "連衣裙"
+				&& (clothes[i].type.type == "連身裙"
 				|| clothes[i].type.type == "上衣"
-				|| clothes[i].type.type == "下裝")
+				|| clothes[i].type.type == "下著")
 			) {
 				if (!result["手選" + clothes[i].type.type]) {
 					result["手選" + clothes[i].type.type] = [];
@@ -122,9 +122,9 @@ function showStrategy2(keywords, suits){
 	}
 	
 	if(keywords != null){
-		$strategy.append(p(getstrClothes(result["手選連衣裙"]), "clothes", "手選連衣裙", "clothes_category"));
+		$strategy.append(p(getstrClothes(result["手選連身裙"]), "clothes", "手選連身裙", "clothes_category"));
 		$strategy.append(p(getstrClothes(result["手選上衣"]), "clothes", "手選上衣", "clothes_category"));	
-		$strategy.append(p(getstrClothes(result["手選下裝"]), "clothes", "手選下裝", "clothes_category"));
+		$strategy.append(p(getstrClothes(result["手選下著"]), "clothes", "手選下著", "clothes_category"));
 	}
 	for (var c in category){
 		var name = category[c];

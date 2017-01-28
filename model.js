@@ -210,10 +210,10 @@ function clotonum(type,id){
 	var mainType='';
 	switch(type.split('-')[0]){
 		case '髮型': mainType='1'; break;
-		case '連衣裙': mainType='2'; break;
+		case '連身裙': mainType='2'; break;
 		case '外套': mainType='3'; break;
 		case '上衣': mainType='4'; break;
-		case '下裝': mainType='5'; break;
+		case '下著': mainType='5'; break;
 		case '襪子': mainType='6'; break;
 		case '鞋子': mainType='7'; break;
 		case '飾品': mainType='8'; break;

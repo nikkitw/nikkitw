@@ -42,7 +42,7 @@ function rowBiguse(piece, isShoppingCart, index) {
 	if(typename.indexOf("飾品-") >=0){
 		typename = "飾品"
 	}
-	var typeid = typename.replace("髮型","10").replace("連衣裙","20").replace("外套", "30").replace("上衣", "40").replace("下裝", "50").replace("襪子", "60").replace("鞋子", "70").replace("飾品", "80").replace("妝容", "90").replace("螢光之靈", "100");
+	var typeid = typename.replace("髮型","10").replace("連身裙","20").replace("外套", "30").replace("上衣", "40").replace("下著", "50").replace("襪子", "60").replace("鞋子", "70").replace("飾品", "80").replace("妝容", "90").replace("螢光之靈", "100");
 	var longid = (render(csv[1]).length>3 ? typeid.replace("0","") : typeid) + render(csv[1]);
 	$imagetd.click(function(){
 		$("#imgModel").show();

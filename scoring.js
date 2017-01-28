@@ -128,10 +128,10 @@ function sigma(score) {
 
 var scoring = {
   '髮型': hairScoring,
-  '連衣裙': dressScoring,
+  '連身裙': dressScoring,
   '外套': coatScoring,
   '上衣': topScoring,
-  '下裝': bottomScoring,
+  '下著': bottomScoring,
   '襪子': sockScoring,
   '鞋子': shoeScoring,
   '飾品': accessoriesScoring,
@@ -141,10 +141,10 @@ var scoring = {
 
 var scoringSize = {
   '髮型': hairSize,
-  '連衣裙': dressSize,
+  '連身裙': dressSize,
   '外套': coatSize,
   '上衣': topSize,
-  '下裝': bottomSize,
+  '下著': bottomSize,
   '襪子': sockSize,
   '鞋子': shoeSize,
   '飾品': accessoriesSize,
@@ -154,10 +154,10 @@ var scoringSize = {
 
 var deviation = {
   '髮型': sigma(hairScoring),
-  '連衣裙': sigma(dressScoring),
+  '連身裙': sigma(dressScoring),
   '外套': sigma(coatScoring),
   '上衣': sigma(topScoring),
-  '下裝': sigma(bottomScoring),
+  '下著': sigma(bottomScoring),
   '襪子': sigma(sockScoring),
   '鞋子': sigma(shoeScoring),
   '飾品': sigma(accessoriesScoring),
@@ -195,10 +195,10 @@ var typeInfo = function() {
       score: getScore(name),
       deviation: getDeviation(name),
       needFilter: function() {
-        return this.mainType == "連衣裙"
+        return this.mainType == "連身裙"
             || this.mainType == "外套"
             || this.mainType == "上衣"
-            || this.mainType == "下裝";
+            || this.mainType == "下著";
       }
     }
   }
