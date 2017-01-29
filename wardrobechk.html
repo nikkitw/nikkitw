@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>奇跡暖暖衣櫃對比</title>
+		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="ui.css">
+		<link rel="stylesheet" type="text/css" href="mobileui.css" media="only screen and (max-width: 650px)">
+		<style>table td {vertical-align:top;}</style>
+		<script type='text/javascript' charset="UTF-8" src='jquery.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='data/wardrobe.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='wardrobechk.js'></script>
+	</head>
+	<body>
+		<div class='title' id="title">
+			<a href="index.html">奇跡暖暖線上工具 by @黑的昇華</a><br/>
+			本頁面為衣櫃對比工具，配裝器、衣櫃錄入等功能請到上面的連結使用～<br/>
+			<br/>
+			使用說明：<br/>
+			1）在配裝器完成衣櫃錄入後，刷新此頁面。（一定要刷新！）<br/>
+			2）遊戲中點衣櫃，對比各分類擁有數量和此頁分類名稱後的數字是否一致。<br/>
+			3）出現不一致時，隨機選取該分類下本頁面左邊的某一位置，檢查此處衣服是否在遊戲衣櫃中也是左邊。如果同樣都是左邊，則該位置以前都是正確的；否則就是在該位置上方（比該衣服編號小的服裝中）少了一件。<br/>
+		</div>
+		<hr>
+		<div id ='category_container'></div>
+		<div>
+			<table>
+				<tr>
+					<td id='check_container_left'></td>
+					<td id='check_container_right'></td>
+				</tr>
+			</table>
+		</div>
+		<textarea id='myClothes' style='display:none'></textarea>
+	</body>
+</html>
