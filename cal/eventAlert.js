@@ -102,8 +102,8 @@ function event_alert(){
 			if(maxHide>0&&i==maxHide) {event_alert_c+='<span id="maxHide" style="display:'+(document.getElementById('maxHide')?document.getElementById('maxHide').style.display:'none')+';">';}
 			switch(parseInt(i)){
 				case maxHide-1: event_alert_c+='<a id="showMaxHide" href="" onclick="showMaxHide();return false;">'+(document.getElementById('showMaxHide')?document.getElementById('showMaxHide').innerHTML:'展開'+opac('：'))+'</a>'; break;
-				case 0: event_alert_c+='提醒：'; break;
-				default: event_alert_c+=opac('提醒：'); break;
+				case 0: event_alert_c+=''; break;
+				default: event_alert_c+=opac(''); break;
 			}
 			event_alert_c+=ret[i][1]+'<br>';
 		}
