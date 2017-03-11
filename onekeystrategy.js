@@ -135,7 +135,7 @@ function showStrategy2(keywords, suits){
 		}
 	}
 	
-	$strategy.append(p("————————飾品————————", "divide"));
+	$strategy.append(p("————————飾品 (高收集佩戴滿，低收集佩戴9件) ————————", "divide"));
 	
 	for (var c in category){
 		var name = category[c];
