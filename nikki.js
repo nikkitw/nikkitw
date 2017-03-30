@@ -1040,3 +1040,12 @@ $(document).ready(function () {
 	menuFixed("clothes");
 });
 
+function exportCustomInventory() {
+	var $link = $("#clothesDownload");
+	var blob = new Blob([$("#myClothes").val()], 
+		{ type:"application/octect-stream" });
+	var blobUrl = URL.createObjectURL(blob);
+	var fileName = "clothes.txt";
+	$link.attr({ href: blobUrl, download: fileName })
+		.text(fileName);
+}
