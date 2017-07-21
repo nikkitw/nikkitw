@@ -268,9 +268,20 @@ function isGrey(c,result){
 	return false;
 }
 
+var IO=true;
 function initOnekey(){
 	$("#onekey").click(function() {
-		showStrategy();
+		if(IO){
+			$("#StrategyInfo").show();
+			showStrategy();
+			$("#onekey").text("收起攻略");	
+			IO=false;
+		}
+		else{
+			$("#StrategyInfo").hide();
+			$("#onekey").text("一鍵攻略");	
+			IO=true;
+		}
 	});
 }
 
