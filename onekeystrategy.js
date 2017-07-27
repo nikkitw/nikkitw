@@ -268,20 +268,18 @@ function isGrey(c,result){
 	return false;
 }
 
-var IO=true;
 function initOnekey(){
 	$("#onekey").click(function() {
-		if(IO){
-			$("#StrategyInfo").show();
-			showStrategy();
-			$("#onekey").text("收起攻略");	
-			IO=false;
-		}
-		else{
+		$("#StrategyInfo").show();
+		showStrategy();
+		if($("#onekey").text().indexOf('收起')>=0){
 			$("#StrategyInfo").hide();
-			$("#onekey").text("一鍵攻略");	
-			IO=true;
+			if(uiFilter["toulan"]) $("#onekey").text("懶黑攻略");
+			else $("#onekey").text("一鍵攻略");
+		}
+		else {
+			$("#StrategyInfo").show();
+			$("#onekey").text("收起攻略");
 		}
 	});
 }
-
