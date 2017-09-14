@@ -126,9 +126,9 @@ function showStrategy(keywords, suits){
 	}
 	
 	if(keywords != null){
-		$strategy.append(p(getstrClothes(result["手選連衣裙"]), "clothes", "手選連衣裙", "clothes_category"));
-		$strategy.append(p(getstrClothes(result["手選上裝"]), "clothes", "手選上裝", "clothes_category"));	
-		$strategy.append(p(getstrClothes(result["手選下裝"]), "clothes", "手選下裝", "clothes_category"));
+		$strategy.append(p(getstrClothes(result["手選連身裙"]), "clothes", "手選連身裙", "clothes_category"));
+		$strategy.append(p(getstrClothes(result["手選上衣"]), "clothes", "手選上衣", "clothes_category"));	
+		$strategy.append(p(getstrClothes(result["手選下著"]), "clothes", "手選下著", "clothes_category"));
 	}
 	for (var c in category){
 		var name = category[c];
