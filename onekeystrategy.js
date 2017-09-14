@@ -287,6 +287,33 @@ function isGrey(c,result){
 
 function initOnekey(){
 	$("#onekey").click(function() {
+		$("#StrategyInfo").show();
 		showStrategy();
+		if($("#onekey").text().indexOf('收起')>=0){
+			$("#StrategyInfo").hide();
+			if(uiFilter["toulan"]) $("#onekey").text("偷懶攻略");
+			else $("#onekey").text("一鍵攻略");
+		}
+		else {
+			$("#StrategyInfo").show();
+			$("#onekey").text("收起攻略");
+		}
 	});
 }
+
+var stgy_rescnt=4;
+var stgy_showall=false;
+function addonekey(){
+	stgy_rescnt+=1;
+	showStrategy();
+}
+function minonekey(){
+	stgy_rescnt=Math.max(1,stgy_rescnt-1);
+	showStrategy();
+}
+function onekeyshowall(){
+	if (stgy_showall){stgy_showall=false;}
+	else{stgy_showall=true;}
+	showStrategy();
+}
+
