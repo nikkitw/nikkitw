@@ -145,7 +145,7 @@ function onChangeUiFilter() {
 	});
 
 	if(uiFilter["toulan"]){
-		$("#onekey").text("懶黑攻略");
+		$("#onekey").text("偷懶攻略");
 	}
 	else{
 		$("#onekey").text("一鍵攻略");		
