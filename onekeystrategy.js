@@ -1,4 +1,8 @@
-function showStrategy2(keywords, suits){
+function showStrategy(keywords, suits){
+	if(uiFilter["toulan"]){
+		lanStrategy();
+		return;
+	}
 	var suitNames = [];
 	function haveKeywords(clothes){
 		if(keywords == null){
@@ -122,9 +126,9 @@ function showStrategy2(keywords, suits){
 	}
 	
 	if(keywords != null){
-		$strategy.append(p(getstrClothes(result["手選連身裙"]), "clothes", "手選連身裙", "clothes_category"));
-		$strategy.append(p(getstrClothes(result["手選上衣"]), "clothes", "手選上衣", "clothes_category"));	
-		$strategy.append(p(getstrClothes(result["手選下著"]), "clothes", "手選下著", "clothes_category"));
+		$strategy.append(p(getstrClothes(result["手選連衣裙"]), "clothes", "手選連衣裙", "clothes_category"));
+		$strategy.append(p(getstrClothes(result["手選上裝"]), "clothes", "手選上裝", "clothes_category"));	
+		$strategy.append(p(getstrClothes(result["手選下裝"]), "clothes", "手選下裝", "clothes_category"));
 	}
 	for (var c in category){
 		var name = category[c];
@@ -135,7 +139,7 @@ function showStrategy2(keywords, suits){
 		}
 	}
 	
-	$strategy.append(p("————————飾品 (高收集佩戴滿，低收集佩戴9件) ————————", "divide"));
+	$strategy.append(p("————————飾品(高收集佩戴滿, 低收集佩戴9件)————————", "divide"));
 	
 	for (var c in category){
 		var name = category[c];
@@ -150,7 +154,7 @@ function showStrategy2(keywords, suits){
 
 	$author_sign = $("<div/>").addClass("stgy_author_sign_div");
 	var d = new Date();
-	$author_sign.append(p("配裝器一鍵攻略@莫默墨陌", "author_sign_name"));
+	$author_sign.append(p("nikkiup2u3 One Key Strategy@莫默墨陌", "author_sign_name"));
 	$author_sign.append(p("generate in " + (1900+d.getYear()) + "-" + (d.getMonth() + 1) + "-" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes(), "author_sign_name"));
 	$strategy.append($author_sign);
 	
@@ -163,6 +167,14 @@ function byActScore(a, b) {
 
 function p(text, cls, text2, cls2){
 	var $p = $("<p/>").text(text).addClass("stgy_" + cls);
+	if(text2){
+		$p.prepend($("<span/>").text(text2).addClass("stgy_" + cls2));
+	}
+	return $p;
+}
+
+function pspan(text, cls, text2, cls2){
+	var $p = $("<span/>").text(text).addClass("stgy_" + cls);
 	if(text2){
 		$p.prepend($("<span/>").text(text2).addClass("stgy_" + cls2));
 	}
@@ -224,11 +236,11 @@ function getstrClothes(result){
 	var max = 5;
 	for(var i in result){
 		if(max > 0){
-			str += " " + result[i].name + "「" + actScore(result[i]) + " " + removeNum(result[i].source) + "」" + ">";		
+			str += " " + result[i].name + "「" + actScore(result[i]) + " " + result[i].src_short /*removeNum(result[i].source)*/ + "」" + ">";		
 			max--;
 		}
 		else if(result[i].source.indexOf("少") >=0 || result[i].source.indexOf("公") >= 0 || result[i].source.indexOf("店") >= 0 || result[i].source.indexOf("送") >= 0 ){
-			str += "> " + result[i].name + "「" + actScore(result[i]) + " " + removeNum(result[i].source) + "」" + " ";
+			str += "> " + result[i].name + "「" + actScore(result[i]) + " " + result[i].src_short /*removeNum(result[i].source)*/ + "」" + " ";
 			break;
 		}
 	}
@@ -236,14 +248,19 @@ function getstrClothes(result){
 }
 
 function removeNum(str){
-	if(str.indexOf("定")>=0 || str.indexOf("進")>=0)
-		str = str.replace(/[0-9]/g,"");
-	str = str.replace("聯盟小鋪", "盟").replace("設計圖", "設").replace("元素重構", "重構").replace("評選賽商店", "評選賽").replace("活動·", "");
+	if (str.indexOf("定")>=0 || str.indexOf("進")>=0) str = str.replace(/[0-9]/g,"");
+	str = str.replace(/聯盟·.*/, "聯盟");
+	str = str.replace("設計圖", "設");
+	str = str.replace(/活動·.*/, "活動");
+	str = str.replace(/夢境：.*/, "夢境");
+	str = str.replace(/儲值·.*/, "儲值");
+	str = str.replace(/贈送·.*/, "贈送");
+	str = str.replace("店·", "");
 	return str;
 }
 
 function actScore(obj){
-	return (obj.type.mainType=='飾品'&&!uiFilter["toulan"]) ? (uiFilter["acc9"] ? Math.round(accSumScore(obj,9)) : Math.round(accSumScore(obj,accCateNum))) : obj.sumScore;
+	return (obj.type.mainType=='飾品') ? (uiFilter["acc9"] ? Math.round(accSumScore(obj,9)) : Math.round(accSumScore(obj,accCateNum))) : obj.sumScore;
 }
 
 function isGrey(c,result){
@@ -270,16 +287,6 @@ function isGrey(c,result){
 
 function initOnekey(){
 	$("#onekey").click(function() {
-		$("#StrategyInfo").show();
 		showStrategy();
-		if($("#onekey").text().indexOf('收起')>=0){
-			$("#StrategyInfo").hide();
-			if(uiFilter["toulan"]) $("#onekey").text("懶黑攻略");
-			else $("#onekey").text("一鍵攻略");
-		}
-		else {
-			$("#StrategyInfo").show();
-			$("#onekey").text("收起攻略");
-		}
 	});
 }
