@@ -436,6 +436,8 @@ function matches(c, criteria, filters) {
 
 function loadCustomInventory() {
 	var myClothes = $("#myClothes").val();
+	myClothes = myClothes.replace("发型","髮型").replace("连衣裙","連身裙").replace("上装","上衣").replace("下装","下著").replace("袜子","襪子").replace("饰品","飾品").replace("妆容","妝容").replace("萤光之灵","螢光之靈");
+	$("#myClothes").val(myClothes);
 	if (myClothes.indexOf('|') > 0) {
 		loadNew(myClothes);
 	} else {
