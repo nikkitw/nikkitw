@@ -42,7 +42,7 @@
 	衣櫃、設計圖更新：by 翡翠<br/> 
 	關卡資訊更新：by 兔子<br/> 
 	繁體化：by 莫默墨陌（<a href="https://nikkitw.github.io/nikkitw/">主要位址</a>、<a href="http://bagua.coding.me/nikkitw/">備用位址</a>）<br/> 
-	友情連結：<a href="http://seal100x.github.io/nikkiup2u3/">陸服</a>、<a href="https://nikkijap.github.io/nikkijp/">日服繁中</a>、<a href="https://nikkijp.github.io/nikkijpch/">日服簡中</a>、<a href="https://nikkikr.github.io/nikkikr/">韓服</a>
+	友情連結：<a href="http://seal100x.github.io/nikkiup2u3/">陸服</a>、<a href="https://nikkijap.github.io/nikkijp/">日服繁中</a>、<a href="https://nikkijp.github.io/nikkijpch/">日服簡中</a>、<a href="https://nikkikr.github.io/nikkikr/">韓服</a>、<a href="https://lovenikkiusa.github.io/nikkiup2u/">美服</a><br/>
 	<div id="share-link"></div> 
 	</div> 
 	<div id="StrategyInfo"></div> 
@@ -293,13 +293,16 @@
 		</div>
 		<hr>
 		<p>我擁有的服裝 （複製衣櫥文字方塊內容以備份衣櫥）</p>
-		<textarea id="myClothes" rows=10 style="width:60%"></textarea><br/>
+		<textarea id="myClothes" rows=10 style="width:60%"></textarea>
 		<p style="width:60%; display:none">衣櫃數量記錄 （複製衣櫥文字方塊內容以備份衣櫥）</p>
 		<textarea id="myClothesNum" rows=10 style="width:60%; display:none"></textarea>
 		<br/>
+		<p>自訂檔案名稱：<input id="inputFileNameToSaveAs"></input><button onclick="saveTextAsFile()">儲存檔案</button></p>
+		<p>選擇檔案：</p>
+		<input type="file" id="fileToLoad">
+		<button onclick="loadFileAsText()">讀取檔案</button>
+		<br/>
 		<button onClick="loadCustomInventory()">恢復備份</button>
-		<button onClick="exportCustomInventory()">產生備份檔</button>
-		<a id='clothesDownload'></a>
 		<br/>
 	</body>
 </html>
