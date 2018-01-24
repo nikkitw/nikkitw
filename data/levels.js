@@ -1,9 +1,9 @@
 // 開心的修改代碼
 var themeFilter = [
-	['聯盟第八章', '聯盟委託: 8-'],
 	['活動', '活動'],
 	['競技場', '競技場'],
 	['聯盟協戰', '協戰'],
+	['聯盟第八章', '聯盟委託: 8-'],
 	['聯盟第七章', '聯盟委託: 7-'],
 	['聯盟第六章', '聯盟委託: 6-'],
 	['聯盟第五章', '聯盟委託: 5-'],
@@ -131,7 +131,9 @@ var tasksRaw = {
 
 //活動關卡，總在最前
 var extraRaw = {
-
+'Hip Hop1-Griffon Bay': [2.9, 2.3, 1.8, -2.9, 1],
+'Hip Hop4-Domain Fight': [2, 1.3, 1.67, 1.33, 0.33],
+'Hip Hop5-Make Peace': [3, 2.33, 2, 1.67, -2],
 };
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
@@ -517,6 +519,7 @@ function addBonusInfo(base, weight, tag) {
  *  - Special rules
  */
  var levelBonus = {
+'Hip Hop4-Domain Fight': [addBonusInfo('A', 1, "運動系")],
 '祈願七夕1-雲端七夕廟會': [addBonusInfo('SS', 1, "中式古典")],
 '祈願七夕3-王室外交事務': [addBonusInfo('A', 1, "哥德風")],
 '祈願七夕4-校園歌會': [addBonusInfo('A', 1, "學院風")],
@@ -1490,6 +1493,9 @@ var addHintInfo = {
 '黑白謎局3-黎明的啟示' :[['套裝即可過關：少女浪漫譚、桃心騎士、夢幻禮服、夢途旅人'],[''],['']],
 '黑白謎局4-信仰之心' :[['套裝即可過關：繾綣白羽、星之海、新月之吻'],[''],['']],
 '黑白謎局5-永夜的舞會' :[['套裝即可過關：繾綣白羽、玫瑰情濃、鑽石人魚、水瀲柔綃'],[''],['']],
+'Hip Hop1-Griffon Bay' :[['【楓糖咒語】、【青春風暴】、【豆柴與呱拉】、【白衣天使】可直接過關'],[''],['']],
+'Hip Hop4-Domain Fight' :[['【夢想啟航】可直接過關'],[''],['']],
+'Hip Hop5-Make Peace' :[['【森林與麋鹿】可直接過關'],[''],['']],
 };
 
 function parseCriteriaList(criteria) {
