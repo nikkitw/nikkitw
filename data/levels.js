@@ -132,8 +132,8 @@ var tasksRaw = {
 //活動關卡，總在最前
 var extraRaw = {
 'Hip Hop1-Griffon Bay': [2.9, 2.3, 1.8, -2.9, 1],
-'Hip Hop4-Domain Fight': [2, 1.3, 1.67, 1.33, 0.33],
-'Hip Hop5-Make Peace': [3, 2.33, 2, 1.67, -2],
+'Hip Hop4-爭奪地盤': [2, 1.3, 1.67, 1.33, 0.33],
+'Hip Hop5-冰釋前嫌': [3, 2.33, 2, 1.67, -2],
 };
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
@@ -519,7 +519,7 @@ function addBonusInfo(base, weight, tag) {
  *  - Special rules
  */
  var levelBonus = {
-'Hip Hop4-Domain Fight': [addBonusInfo('A', 1, "運動系")],
+'Hip Hop4-爭奪地盤': [addBonusInfo('A', 1, "運動系")],
 '祈願七夕1-雲端七夕廟會': [addBonusInfo('SS', 1, "中式古典")],
 '祈願七夕3-王室外交事務': [addBonusInfo('A', 1, "哥德風")],
 '祈願七夕4-校園歌會': [addBonusInfo('A', 1, "學院風")],
@@ -1202,6 +1202,9 @@ var addSkillsInfo = {
 '祈願七夕5-滋潤的生活':[null,null,['挑剔','沉睡','聖誕']],
 '祈願七夕6-春夏時尚周':[null,null,['挑剔','灰姑娘']],
 '祈願七夕7-七夕盛宴':[null,null,['挑剔','聖誕','沉睡']],
+'Hip Hop1-Griffon':[null,null,['微笑','挑剔','免挑','反挑']],
+'Hip Hop4-爭奪地盤':[null,null,['微笑','挑剔','灰姑娘']],
+'Hip Hop5-冰釋前嫌':[null,null,['微笑','挑剔','灰姑娘','沉睡']],
 };
 
 //例：//'14-1' :[['必穿？？衣服。權重、tag不准，更新中。歡迎回饋F品，謝謝大家！'],[''],['']],
@@ -1494,8 +1497,8 @@ var addHintInfo = {
 '黑白謎局4-信仰之心' :[['套裝即可過關：繾綣白羽、星之海、新月之吻'],[''],['']],
 '黑白謎局5-永夜的舞會' :[['套裝即可過關：繾綣白羽、玫瑰情濃、鑽石人魚、水瀲柔綃'],[''],['']],
 'Hip Hop1-Griffon Bay' :[['【楓糖咒語】、【青春風暴】、【豆柴與呱拉】、【白衣天使】可直接過關'],[''],['']],
-'Hip Hop4-Domain Fight' :[['【夢想啟航】可直接過關'],[''],['']],
-'Hip Hop5-Make Peace' :[['【森林與麋鹿】可直接過關'],[''],['']],
+'Hip Hop4-爭奪地盤' :[['【夢想啟航】可直接過關'],[''],['']],
+'Hip Hop5-冰釋前嫌' :[['【森林與麋鹿】可直接過關'],[''],['']],
 };
 
 function parseCriteriaList(criteria) {
