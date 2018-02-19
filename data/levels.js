@@ -132,9 +132,7 @@ var tasksRaw = {
 
 //活動關卡，總在最前
 var extraRaw = {
-'Hip Hop1-Griffon Bay': [2.9, 2.3, 1.8, -2.9, 1],
-'Hip Hop4-爭奪地盤': [2, 1.3, 1.67, 1.33, 0.33],
-'Hip Hop5-冰釋前嫌': [3, 2.33, 2, 1.67, -2],
+'傾心回憶-莉莉斯新娘': [-1.33, -1, -1.33, -1.33, -0.67],
 };
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
