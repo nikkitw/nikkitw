@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="UTF-8">
+		<title材料需求綜合查詢</title>
+		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="data/material_style.css">
+		<style>
+			<!--
+			a{color:#337ab7;text-decoration:none}
+			a:focus,a:hover{color:#23527c;text-decoration:underline}
+			a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
+			-->
+			body {background-color:rgba(255,255,255,0);}
+			td {padding:5px;}
+			a.inherit {color:inherit;}
+			a.search {color:black;text-decoration:none;}
+			p.large{line-height: 200%;}
+			.level_drop_cnt {white-space: pre;}
+			.xzh {color:#8000FF;}
+			.syqc {color:#FF88FF;}
+			.gls {color:red;}
+			.bfzg {color:blue;}
+			.bylg {color:green;}
+			#myClothes {width:60%}
+			em {opacity:0;}
+			@media only screen and (max-width:650px){
+				#myClothes {width:100%}
+			}
+		</style>
+		<script type="text/javascript" charset="UTF-8" src="jquery.js"></script>
+		<script type='text/javascript' charset="UTF-8" src='knockout.js'></script>
+		<script type='text/javascript' charset="UTF-8" src='html2canvas.js'></script>
+		<script type="text/javascript" charset="UTF-8" src="data/material_wardrobe.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="material_exc.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="material_scoring.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="material_model.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="data/material_pattern.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="data/material_convert.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="data/material_construct.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="data/material_merchant.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="data/material_setcategory.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="material.js"></script>
+		<script type="text/javascript" charset="UTF-8">
+			$(document).ready(function () {
+				$('#lastupd').html(wardrobe_lastupd.replace("/","-").replace("/","-"));
+				
+				//hide the intro in custInv
+				var elts = document.getElementsByTagName('a');
+				for (var i = elts.length - 1; i >= 0; --i) {
+					if(elts[i].getAttribute('tooltip')) {elts[i].style.display="none";}
+				}
+				
+				//cookies
+				if (typeof(Storage) !== "undefined"&&localStorage.getItem("nikki_ZHCX_hideIntro")){
+					if(localStorage.getItem("nikki_ZHCX_hideIntro")>0) {showIntro();};
+				}
+			});
+			function tab(text,attr){
+				return '<td'+(attr? ' '+attr : '')+' style="text-align:left">'+text+'</td>';
+			}
+			function showIntro(){
+				if (document.getElementById('intro').style.display=="none"){
+					document.getElementById('intro').style.display="inline";
+					document.getElementById('aIntro').innerHTML="<收起>";
+					var hideIntro=0;
+				}else{
+					document.getElementById('intro').style.display="none";
+					document.getElementById('aIntro').innerHTML="<展開>";
+					var hideIntro=1;
+				}
+				if (typeof(Storage) !== "undefined") {
+					localStorage.setItem("nikki_ZHCX_hideIntro", hideIntro);
+				}
+			}
+		</script>
+	</head>
+	<body>
+	<div class="myframe">
+		<p class="title1">材料需求綜合查詢</p>
+		<p class="normal">
+			<span class="title3">更新時間：</span><span id="lastupd"></span><br>
+			<span class="title3">製作人員：</span>Rean翎
+<br><span class="title3">繁體化人員：</span>莫默墨陌、浠玥、玥珞
+
+		</p>
+		<p class="normal">
+			<span class="title3">使用說明：</span><a href="" onclick="showIntro();return false;" id="aIntro">&lt;展開&gt;</a>
+			<span id="intro" style="display:none;"><br>
+			可查詢一個部件的<b>製作材料</b>、該部件是<b>哪些衣服的材料及所需數量</b>。<br>
+			支持按關卡、按套裝、按星級、按部件-自訂查詢以及特殊屬性(tag)搜索。<br>
+			- 按套裝：可查看整個套裝的製作材料(配合購物車可一併查看染色)；最後有過關套列表。<br>
+			- 衣櫃：導入配裝器衣櫃後，部件共需數量會扣除已有成品(查看製作材料時不會扣除已有材料)。<br>
+			- 購物車：點擊<button class="glyphicon glyphicon-shopping-cart btn btn-xs btn-default" style="line-height: 100%;"></button>添加後可計算整個購物車；購物車內點擊單件可查看單件信息。
+			</span>
+		</p>
+		<hr class="mhr">
+		<p class="large" align="center"><span id="chooseScope"></span><span id="chooseLevel"></span><span id="chooseSub"></span><span id="chooseSub2"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="downloadimage" align="center"></a><a id="auto" style="display:none;"></a></p>
+		<p id="invopts" align="center"></p>
+		<p id="custInv" style="display:none;" align="center"></p><p id="custCart" style="display:none;" align="center"></p>
+		<p id="levelDropInfo" align="center"></p>
+		<p id="levelDropNote" align="center"></p>
+	</body>
+</html>
