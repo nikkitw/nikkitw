@@ -141,9 +141,8 @@ var tasksRaw = {
 
 //活動關卡，總在最前
 var extraRaw = {
-'極限競速1-閃耀的賽車手': [-1.33, -2.27, 1.33, -2.27, 0.67],
-'極限競速3-天才領航員': [2.8, -1.67, -1.67, 2.67, 0.67],
-'極限競速4-臨時組合誕生': [2.67, -1.6, -2.53, 1.6, 0.67],
+'冥水鳶陣營-科學技術': [-1.2, -2.87, 1.87, -2.87, 0.8],
+'越千霜陣營-城牆巡邏': [-2.4, -1.33, -2.4, 1.33, -0.8],
 };
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
@@ -555,6 +554,8 @@ function addBonusInfo(base, weight, tag) {
  *  - Special rules
  */
  var levelBonus = {
+'冥水鳶陣營-科學技術': [addBonusInfo('S', 0.1, "搖滾風")],
+'越千霜陣營-城牆巡邏': [addBonusInfo('B', 0.5, "軍裝")],
 "極限競速1-閃耀的賽車手": [addBonusInfo('C', 1, "未來系")],
 "極限競速4-臨時組合誕生": [addBonusInfo('C', 1, "防曬")],
 'Hip Hop4-爭奪地盤': [addBonusInfo('A', 1, "運動系")],
