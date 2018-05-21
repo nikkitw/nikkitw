@@ -142,6 +142,9 @@ var tasksRaw = {
 
 //活動關卡，總在最前
 var extraRaw = {
+'飛躍午夜1-消失的搜查官': [2, 1.0, 1.0, 2, -2.7],
+'飛躍午夜4-偶遇惡魔醫生': [2.8, 1.7, 3, 1.7, 0.7],
+'飛躍午夜5-下弦月之夜': [2.7, 1.5, 2.7, -0.5, 0.5],
 };
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
@@ -565,6 +568,8 @@ function addBonusInfo(base, weight, tag) {
  *  - Special rules
  */
  var levelBonus = {
+'飛躍午夜1-消失的搜查官': [addBonusInfo('B', 0.6, '冬裝')],
+'飛躍午夜5-下弦月之夜': [addBonusInfo('A', 0.75, '圍裙')],
   "1-1": [],
   "1-2": [],
   "1-3": [addBonusInfo('B', 0.25, "中式古典")],
