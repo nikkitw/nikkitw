@@ -889,6 +889,7 @@ function addBonusInfo(base, weight, tag) {
 "聯盟委託: 9-4": [addBonusInfo('A', 1, "中式古典")],
 "聯盟委託: 9-6": [addBonusInfo('B', 1, "俠客聯盟")],
 "聯盟委託: 9-7": [addBonusInfo('S', 0.5, "晚禮服")],
+ "聯盟委託: 10-1": [addBonusInfo('A', 1, "民初服飾")],
   "綾羅1-6": [addBonusInfo('C', 1, "中式古典")],
   "綾羅2-2": [addBonusInfo('C', 1, "中式古典")],
   "綾羅2-7": [addBonusInfo('B', 1, "搖滾風")],
