@@ -3,7 +3,7 @@
 	<head> 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
-	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon" /> 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta name="renderer" content="webkit"> 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
@@ -18,9 +18,9 @@
 		<script type='text/javascript' charset="UTF-8" src='jquery.freezeheader.js'></script> 
 		<script type='text/javascript' charset="UTF-8" src="bootstrap/bootstrap.min.js"></script> 
 		<script type='text/javascript' charset="UTF-8" src="tool.js"></script> 
-		<script type='text/javascript' charset="UTF-8" src='data/wardrobe.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='data/wardrobe2.js'></script> 
 		<script type='text/javascript' charset="UTF-8" src='scoring.js'></script> 
-		<script type='text/javascript' charset="UTF-8" src='data/levels.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='data/levels2.js'></script> 
 		<script type='text/javascript' charset="UTF-8" src='data/flist.js'></script> 
 		<script type='text/javascript' charset="UTF-8" src='model.js'></script> 
 		<script type='text/javascript' charset="UTF-8" src='data/pattern.js'></script> 
@@ -31,7 +31,7 @@
 		<script type='text/javascript' charset="UTF-8" src='clock.js'></script> 
 		<script type='text/javascript' charset="UTF-8" src='sharewardrobe.js'></script> 
 	</head> 
-	<body>
+	<body> 
 	<div class="FloatMenu"> 
 		<span><a href="#top" ><i class="fa fa-arrow-up fa-fw"></i></a></span><br>
 		<span><a href="http://gjnntw.weebly.com/" target="framemain" onclick="gotop()"><i class="fa fa-home fa-fw"></i></a></span><br>
@@ -87,7 +87,6 @@
 		07.17衣櫃新增至v2.1.0(部分)；開啟「關卡第十三章」、「聯盟凝砂之戰」<br/>
 		07.18衣櫃新增至v2.1.0(全部)<br/>
 		07.21一鍵攻略可以收起來囉！<br/>
-		07.27修正一鍵攻略<br/>
 		08.09衣櫃新增至v2.2.1(部分)；開啟「關卡第十四章」、「聯盟第六章」<br/>
 		08.10衣櫃新增至v2.2.1(全部)<br/>
 		08.24衣櫃新增至v2.2.2<br/>
@@ -115,11 +114,12 @@
 		04.15衣櫃新增至v3.1.0；開啟「聯盟第九章」<br/>
 		04.20開啟「活動·極限競速」<br/>
 		04.30開啟「活動·山雨欲來」<br/>
-		<br/>
-	</div>
-		2018.05更新<br/>
 		05.10衣櫃新增至v3.2.0；開啟「關卡十九章」<br/>
 		05.30衣櫃新增至v3.3.0；開啟「聯盟第十章」<br/>
+		<br/>
+	</div>
+		2018.06更新<br/>
+		06.11開啟「活動·滿天繁星第三期」、「活動·祈福端午」<br/>
 		<hr/>
 		溫馨提醒：<br/>	
 		1.因台版進度落後陸版，有些過關提示有「別穿外套！但新外套可以」之類，請無視「新外套可以」，這不一定適用台版！<br/>
@@ -133,6 +133,7 @@
 		<hr/>
 		回報衣服錯誤、F品的聯絡處：<br/>
 		<a href="https://www.facebook.com/%E5%A5%87%E8%BF%B9%E6%9A%96%E6%9A%96%E6%94%BB%E7%95%A5%E5%85%AB%E5%8D%A6%E6%A8%93-390284231325632/" target="_blank">FB粉絲專頁</a>、<a href="https://home.gamer.com.tw/creationDetail.php?sn=3432154" target="_blank">巴哈</a>
+		<br/>
 		<br/>
 	<a href="#" id="show_history">查看歷史更新</a><br/>
 
@@ -238,8 +239,8 @@
 								</div>
 							</div><!-- facet -->
 							<div class="fliter_option clear">
-								<div class="checkbox"><label><input type="checkbox" class="fliter" value="own" checked /> 擁有<span id='inventoryCount'/></label></div>
-								<div class="checkbox"><label><input type="checkbox" class="fliter" value="missing" checked /> 沒有</label></div>
+								<div class="checkbox"><label><input type="checkbox" class="fliter" value="own" style="color:#00A7E1" checked /> 擁有<span id='inventoryCount'/></label></div>
+								<div class="checkbox"><label><input type="checkbox" class="fliter" value="missing" style="color:#00A7E1" checked /> 沒有</label></div>
 								<div class="checkbox"><label><input type="checkbox" id="searchResultCheck" onclick="toggleSearchResult()" checked /> 搜索</label></div>
 								<a href="#" class = "showmore" style="display:inline-block;cursor:pointer">↓顯示全部衣服↓</a>
 							</div><!-- fliter_option -->
@@ -285,7 +286,7 @@
 		</div><!-- top -->
 		<hr>
 		<div id = 'searchResult'>
-			<input type="text" id="searchResultInput" class="btn-sm" placeholder="輸入名字搜索" /><button class="btn btn-default btn-sm" onclick="searchResult()">搜索</button><button class="btn btn-default btn-sm" id="searchResultMode">→衣櫃</button>
+			<input type="text" id="searchResultInput" class="btn-sm" placeholder="輸入名字搜索" /><button class="btn btn-default btn-sm blue3" onclick="searchResult()">搜索</button><button class="btn btn-default btn-sm blue3" id="searchResultMode">→衣櫃</button>
 			<div id='searchResultList' width="100%"></div>
 		<hr>
 		</div>
@@ -306,6 +307,15 @@
 		  <button onClick="doImport()">導入</button>
 		</div>
 		<hr>
+		<!-- <p>我擁有的服裝 （複製衣櫥文字方塊內容以備份衣櫥）</p> -->
+		<!-- <textarea id="myClothes" rows=10 style="width:60%"></textarea><br/> -->
+		<!-- <p style="width:60%; display:none">衣櫃數量記錄 （複製衣櫥文字方塊內容以備份衣櫥）</p> -->
+		<!-- <textarea id="myClothesNum" rows=10 style="width:60%; display:none"></textarea> -->
+		<!-- <br/> -->
+		<!-- <button onClick="loadCustomInventory()">恢復備份</button> -->
+		<!-- <button onClick="exportCustomInventory()">產生備份檔</button> -->
+		<!-- <a id='clothesDownload'></a> -->
+		<!-- <br/> -->
 		<p>我擁有的服裝 （複製衣櫥文字方塊內容以備份衣櫥）</p>
 		<textarea id="myClothes" rows=10 style="width:60%"></textarea>
 		<p style="width:60%; display:none">衣櫃數量記錄 （複製衣櫥文字方塊內容以備份衣櫥）</p>
