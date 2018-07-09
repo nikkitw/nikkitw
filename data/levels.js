@@ -153,7 +153,7 @@ var tasksRaw = {
 
 //活動關卡，總在最前
 var extraRaw = {
-'古堡幽夜-2危機四伏的前廳': [2.66, 1.33, 2.66, 1.33, -1.33],
+'古堡幽夜-3虛位以待的舞會': [-1.33, -2.66, -2.66, -1.33, -0.67],
 };
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
