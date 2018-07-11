@@ -153,7 +153,7 @@ var tasksRaw = {
 
 //活動關卡，總在最前
 var extraRaw = {
-'古堡幽夜-4暗藏玄機的客房': [2.66, 1.33, -1.33, 2.66, -1.33],
+'古堡幽夜-5戰場的收藏室': [-2.66, -1.33, -2, -2.66, -1.33],
 };
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
