@@ -1,61 +1,61 @@
 // 開心的修改代碼
 var themeFilter = [
-	['第二卷第二章', '關卡: II-2-'],
-	['第二卷第一章', '關卡: II-1-'],
-	['活動', '活動'],
-	['競技場', '競技場'],
-	['聯盟協戰', '協戰'],
-	['聯盟第十章', '聯盟委託: 10-'],
-	['聯盟第九章', '聯盟委託: 9-'],
-	['聯盟第八章', '聯盟委託: 8-'],
-	['聯盟第七章', '聯盟委託: 7-'],
-	['聯盟第六章', '聯盟委託: 6-'],
-	['聯盟第五章', '聯盟委託: 5-'],
-	['聯盟第四章', '聯盟委託: 4-'],
-	['聯盟第三章', '聯盟委託: 3-'],
-	['聯盟第二章', '聯盟委託: 2-'],
-	['聯盟第一章', '聯盟委託: 1-'],
-	['第十九章', '關卡: I-19-'],
-	['第十八章', '關卡: I-18-'],
-	['第十七章', '關卡: I-17-'],
-	['第十六章', '關卡: I-16-'],
-	['第十五章', '關卡: I-15-'],
-	['第十四章', '關卡: I-14-'],
-	['第十三章', '關卡: I-13-'],
-	['第十二章', '關卡: I-12-'],
-	['第十一章', '關卡: I-11-'],
-	['第十章', '關卡: I-10-'],
-	['第九章', '關卡: I-9-'],
-	['第八章', '關卡: I-8-'],
-	['第七章', '關卡: I-7-'],
-	['第六章', '關卡: I-6-'],
-	['第五章', '關卡: I-5-'],
-	['第四章', '關卡: I-4-'],
-	['第三章', '關卡: I-3-'],
-	['第二章', '關卡: I-2-'],
-	['第一章', '關卡: I-1-'],
-	['織夢人', '織夢人'],
+['第二卷第二章', '關卡: II-2-'],
+['第二卷第一章', '關卡: II-1-'],
+['活動', '活動'],
+['競技場', '競技場'],
+['聯盟協戰', '協戰'],
+['聯盟第十章', '聯盟委託: 10-'],
+['聯盟第九章', '聯盟委託: 9-'],
+['聯盟第八章', '聯盟委託: 8-'],
+['聯盟第七章', '聯盟委託: 7-'],
+['聯盟第六章', '聯盟委託: 6-'],
+['聯盟第五章', '聯盟委託: 5-'],
+['聯盟第四章', '聯盟委託: 4-'],
+['聯盟第三章', '聯盟委託: 3-'],
+['聯盟第二章', '聯盟委託: 2-'],
+['聯盟第一章', '聯盟委託: 1-'],
+['第十九章', '關卡: I-19-'],
+['第十八章', '關卡: I-18-'],
+['第十七章', '關卡: I-17-'],
+['第十六章', '關卡: I-16-'],
+['第十五章', '關卡: I-15-'],
+['第十四章', '關卡: I-14-'],
+['第十三章', '關卡: I-13-'],
+['第十二章', '關卡: I-12-'],
+['第十一章', '關卡: I-11-'],
+['第十章', '關卡: I-10-'],
+['第九章', '關卡: I-9-'],
+['第八章', '關卡: I-8-'],
+['第七章', '關卡: I-7-'],
+['第六章', '關卡: I-6-'],
+['第五章', '關卡: I-5-'],
+['第四章', '關卡: I-4-'],
+['第三章', '關卡: I-3-'],
+['第二章', '關卡: I-2-'],
+['第一章', '關卡: I-1-'],
+['織夢人', '織夢人'],
 ];
 
 //順序：簡可活純涼
 var competitionsRaw = {
-  '海邊派對的搭配': [0.67, 1.33, 1.0, -1.33, 1.33],
-  '春天在哪裡': [0.67, 1.33, 1.33, 1.33, 1.0],
-  '辦公室明星': [1.33, -1.33, -1.33, -1.0, 0.67],
-  '夏日物語': [1.33, 0.67, -1.33, 1.0, 1.33],
-  '聖誕家庭聚會': [1.33, 1.0, 0.67, 1.33, -1.33],
-  '年輕的春遊': [1.33, 1.33, 1.33, 1.0, 0.67],
-  '運動進行時': [1.0, 0.67, 1.33, 1.33, 1.33],
-  '金色音樂廳': [-1.33, -1.33, -1.33, -1.0, -0.67],
-  '夏季遊園會': [1.33, 1.0, 0.67, 1.33, 1.33],
-  '女王大人': [-1.0, -1.33, -1.33, -1.33, 0.67],
-  '冬天裡的一把火': [-0.67, 1.0, 1.33, -1.33, -1.33],
-  '大偵探福爾摩斯': [1.33, -1.33, -1.33, 0.67, -1.0],
-  '宮廷歌舞會': [-1.33, -1.0, -1.33, -1.33, -0.67],
-  '奇幻童話園': [-1.33, 1.33, -1.33, 1.0, 0.67],
-  '有女初長成': [0.67, -1.33, -1.33, 1.33, -1.0],
-  '絕色無雙': [-1.33, -1.0, -1.33, 1.33, -0.67],
-  '清秀佳人': [1.33, 0.67, -1.33, 1.33, 1.0]
+'海邊派對的搭配': [0.67, 1.33, 1.0, -1.33, 1.33],
+'春天在哪裡': [0.67, 1.33, 1.33, 1.33, 1.0],
+'辦公室明星': [1.33, -1.33, -1.33, -1.0, 0.67],
+'夏日物語': [1.33, 0.67, -1.33, 1.0, 1.33],
+'聖誕家庭聚會': [1.33, 1.0, 0.67, 1.33, -1.33],
+'年輕的春遊': [1.33, 1.33, 1.33, 1.0, 0.67],
+'運動進行時': [1.0, 0.67, 1.33, 1.33, 1.33],
+'金色音樂廳': [-1.33, -1.33, -1.33, -1.0, -0.67],
+'夏季遊園會': [1.33, 1.0, 0.67, 1.33, 1.33],
+'女王大人': [-1.0, -1.33, -1.33, -1.33, 0.67],
+'冬天裡的一把火': [-0.67, 1.0, 1.33, -1.33, -1.33],
+'大偵探福爾摩斯': [1.33, -1.33, -1.33, 0.67, -1.0],
+'宮廷歌舞會': [-1.33, -1.0, -1.33, -1.33, -0.67],
+'奇幻童話園': [-1.33, 1.33, -1.33, 1.0, 0.67],
+'有女初長成': [0.67, -1.33, -1.33, 1.33, -1.0],
+'絕色無雙': [-1.33, -1.0, -1.33, 1.33, -0.67],
+'清秀佳人': [1.33, 0.67, -1.33, 1.33, 1.0]
 };
 
 var tasksRaw = {
@@ -153,9 +153,7 @@ var tasksRaw = {
 
 //活動關卡，總在最前
 var extraRaw = {
-'黎明之戰-低調的晚宴裝扮': [1.6, -1.47, -1.6, -1.07, 0.67],
-'黎明之戰-適合戰鬥的搭配': [-1.8, -1.8, -0.93, -0.67, -0.67],
-'黎明之戰-華麗優雅的禮服': [-1.67, -0.8, -1.67, -0.8, 0.4],
+
 };
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
@@ -450,158 +448,155 @@ var dreamWeavingRaw = {
 }
 
 function tagMatcher(whitelist, clothes) {
-  for (var i in clothes.tags) {
-    var tag = clothes.tags[i];
-    if (tag.length > 0 && whitelist.indexOf(tag) >= 0) {
-      return true;
-    }
-  }
-  return false;
+for (var i in clothes.tags) {
+var tag = clothes.tags[i];
+if (tag.length > 0 && whitelist.indexOf(tag) >= 0) {
+  return true;
+}
+}
+return false;
 }
 
 function nameMatcher(whitelist, clothes) {
-  var names = whitelist.split('/');
-  for (var i in names) {
-    if (clothes.name.indexOf(names[i]) >= 0) {
-      return true;
-    }
-  }
-  return false;
+var names = whitelist.split('/');
+for (var i in names) {
+if (clothes.name.indexOf(names[i]) >= 0) {
+  return true;
+}
+}
+return false;
 }
 
 function weightedFilter(tagWhitelist, nameWhitelist, weight) {
-  return {
-    tagWhitelist: tagWhitelist,
-    nameWhitelist: nameWhitelist,
-    filter: function(clothes) {
-      if (tagWhitelist && tagMatcher(tagWhitelist, clothes)) {
-        return;
-      }
-      if (nameWhitelist && nameMatcher(nameWhitelist, clothes)) {
-        return;
-      }
-      clothes.tmpScore /= weight;
-    }
+return {
+tagWhitelist: tagWhitelist,
+nameWhitelist: nameWhitelist,
+filter: function(clothes) {
+  if (tagWhitelist && tagMatcher(tagWhitelist, clothes)) {
+	return;
   }
+  if (nameWhitelist && nameMatcher(nameWhitelist, clothes)) {
+	return;
+  }
+  clothes.tmpScore /= weight;
+}
+}
 }
 
 function normalFilter(tagWhitelist, nameWhitelist) {
-  return weightedFilter(tagWhitelist, nameWhitelist, 10);
+return weightedFilter(tagWhitelist, nameWhitelist, 10);
 }
 
 // IP君按tag過濾F品, 目前只顯示提示文字
 var levelFilters = {
-  '1-3': normalFilter("中式古典/中式現代/旗袍/民初服飾"),
-  '1-7': normalFilter("中性風"),
-  '2-6': normalFilter("和風"),
-  '2-7': normalFilter("睡衣"),
-  '2-9': normalFilter("歐式古典/晚禮服/女神系/波西米亞"),
-  '2-支2': normalFilter("中性風"),
-  '3-1': normalFilter("英倫風", "名媛連身裙"),
-  '3-2': normalFilter("搖滾風"),
-  '3-4': normalFilter("森林系"),
-  '3-5': normalFilter("運動系", "運動"),
-  '3-6': weightedFilter("沐浴/和風", null, 160),
-  '3-7': normalFilter("運動系"), // TODO: double check
-  '3-9': normalFilter("俠客聯盟/搖滾風"),
-  '3-11': normalFilter("歐式古典/晚禮服/女神系/波西米亞"),
-  '3-支1': normalFilter("歐式古典/晚禮服/女神系/波西米亞"),
-  '3-支2': normalFilter("婚紗"),
-  '4-2': weightedFilter("泳裝", null, 32),
-  '4-3': weightedFilter("泳裝", null, 32),
-  '4-6': normalFilter("OL"),
-  '4-7': normalFilter("歐式古典/晚禮服/女神系/波西米亞"),
-  '4-8': normalFilter("從醫人員"),
-  '4-9': normalFilter("中式古典/中式現代/旗袍/民初服飾"),
-  '4-12': normalFilter("兔女郎"),
-  '4-支2': normalFilter("圍裙"),
-  '4-支3': normalFilter("圍裙"),
-  '5-1': normalFilter("運動系", "運動"),
-  '5-6': normalFilter("民初服飾"),
-  '5-7': normalFilter("波西米亞"),
-  '5-11': normalFilter("俠客聯盟"),
-  '5-12': normalFilter("中式古典/中式現代/旗袍/民初服飾"),
-  '5-支2': normalFilter("運動系"), // TODO: double check,
-  '5-支3': normalFilter("從醫人員"),
-  '6-2': normalFilter("中式古典/中式現代/旗袍/民初服飾"),
-  '6-3': normalFilter("和風"),
-  '6-6': normalFilter("中性風"),
-  '6-8': normalFilter("中式現代/泳裝"),
-  '6-9': normalFilter("旗袍"),
-  '6-10': normalFilter("中式現代/冬裝"),
-  '6-11': normalFilter("中式古典/中式現代/旗袍/民初服飾"),
+'1-3': normalFilter("中式古典/中式現代/旗袍/民初服飾"),
+'1-7': normalFilter("中性風"),
+'2-6': normalFilter("和風"),
+'2-7': normalFilter("睡衣"),
+'2-9': normalFilter("歐式古典/晚禮服/女神系/波西米亞"),
+'2-支2': normalFilter("中性風"),
+'3-1': normalFilter("英倫風", "名媛連身裙"),
+'3-2': normalFilter("搖滾風"),
+'3-4': normalFilter("森林系"),
+'3-5': normalFilter("運動系", "運動"),
+'3-6': weightedFilter("沐浴/和風", null, 160),
+'3-7': normalFilter("運動系"), // TODO: double check
+'3-9': normalFilter("俠客聯盟/搖滾風"),
+'3-11': normalFilter("歐式古典/晚禮服/女神系/波西米亞"),
+'3-支1': normalFilter("歐式古典/晚禮服/女神系/波西米亞"),
+'3-支2': normalFilter("婚紗"),
+'4-2': weightedFilter("泳裝", null, 32),
+'4-3': weightedFilter("泳裝", null, 32),
+'4-6': normalFilter("OL"),
+'4-7': normalFilter("歐式古典/晚禮服/女神系/波西米亞"),
+'4-8': normalFilter("從醫人員"),
+'4-9': normalFilter("中式古典/中式現代/旗袍/民初服飾"),
+'4-12': normalFilter("兔女郎"),
+'4-支2': normalFilter("圍裙"),
+'4-支3': normalFilter("圍裙"),
+'5-1': normalFilter("運動系", "運動"),
+'5-6': normalFilter("民初服飾"),
+'5-7': normalFilter("波西米亞"),
+'5-11': normalFilter("俠客聯盟"),
+'5-12': normalFilter("中式古典/中式現代/旗袍/民初服飾"),
+'5-支2': normalFilter("運動系"), // TODO: double check,
+'5-支3': normalFilter("從醫人員"),
+'6-2': normalFilter("中式古典/中式現代/旗袍/民初服飾"),
+'6-3': normalFilter("和風"),
+'6-6': normalFilter("中性風"),
+'6-8': normalFilter("中式現代/泳裝"),
+'6-9': normalFilter("旗袍"),
+'6-10': normalFilter("中式現代/冬裝"),
+'6-11': normalFilter("中式古典/中式現代/旗袍/民初服飾"),
 };
 
 function abstractBonusFactory(note, replace, param, tagWhitelist, nameWhitelist, callback) {
-  return function(criteria) {
-    return {
-      tagWhitelist: tagWhitelist,
-      nameWhitelist: nameWhitelist,
-      note: note,
-      replace: replace,
-      param: param,
-      filter: function(clothes) {
-        if ((tagWhitelist && tagMatcher(tagWhitelist, clothes))
-            || (nameWhitelist && nameMatcher(nameWhitelist, clothes))) {
-          return callback(criteria, clothes);
-        }
-        return [0, {}];
-      }
-    }
-  };
+return function(criteria) {
+return {
+  tagWhitelist: tagWhitelist,
+  nameWhitelist: nameWhitelist,
+  note: note,
+  replace: replace,
+  param: param,
+  filter: function(clothes) {
+	if ((tagWhitelist && tagMatcher(tagWhitelist, clothes))
+		|| (nameWhitelist && nameMatcher(nameWhitelist, clothes))) {
+	  return callback(criteria, clothes);
+	}
+	return [0, {}];
+  }
+}
+};
 }
 
 function featureBasedScoringFactory(bonus, multiplier){
-  return function(criteria, clothes) {
-    var total = 0;
-    var byFeature = {};
-    for (var i in FEATURES) {
-      var f = FEATURES[i];
-      var addon = Math.abs(criteria[f] * clothes.type.score[bonus] * multiplier);
-      byFeature[f] = addon;
-      total += addon;
-    }
-    return [total, byFeature];
-  }
+return function(criteria, clothes) {
+var total = 0;
+var byFeature = {};
+for (var i in FEATURES) {
+  var f = FEATURES[i];
+  var addon = Math.abs(criteria[f] * clothes.type.score[bonus] * multiplier);
+  byFeature[f] = addon;
+  total += addon;
+}
+return [total, byFeature];
+}
 }
 
 function addScoreBonusFactory(bonus, multiplier, tagWhitelist, nameWhitelist) {
-  return abstractBonusFactory('各屬性依權重加分', false, bonus + " * " + multiplier, tagWhitelist,
-      nameWhitelist, featureBasedScoringFactory(bonus, multiplier));
+return abstractBonusFactory('各屬性依權重加分', false, bonus + " * " + multiplier, tagWhitelist,
+  nameWhitelist, featureBasedScoringFactory(bonus, multiplier));
 }
 
 function replaceScoreBonusFactory(bonus, multiplier, tagWhitelist, nameWhitelist) {
-  return abstractBonusFactory('各屬性均視為相符，且替換為', true, bonus + " * " + multiplier,
-      tagWhitelist, nameWhitelist, featureBasedScoringFactory(bonus, multiplier));
+return abstractBonusFactory('各屬性均視為相符，且替換為', true, bonus + " * " + multiplier,
+  tagWhitelist, nameWhitelist, featureBasedScoringFactory(bonus, multiplier));
 }
 
 function bonusInfo(base, weight, tag, replace) {
-  return {
-    base: base,
-    weight: weight,
-    tag: tag,
-    replace: replace
-  }
+return {
+base: base,
+weight: weight,
+tag: tag,
+replace: replace
+}
 }
 
 function replaceBonusInfo(base, weight, tag) {
-  return bonusInfo(base, weight, tag, true);
+return bonusInfo(base, weight, tag, true);
 }
 
 function addBonusInfo(base, weight, tag) {
-  return bonusInfo(base, weight, tag, false);
+return bonusInfo(base, weight, tag, false);
 }
 
 /*
- * There are three major types of bonus:
- *  - Add a fixed number to each feature (weight applied)
- *  - Replace current clothes features to another one
- *  - Special rules
- */
- var levelBonus = {
-'黎明之戰-低調的晚宴裝扮': [addBonusInfo('C', 0.5, '晚禮服')],
-'黎明之戰-適合戰鬥的搭配': [addBonusInfo('A', 0.25, '冬裝'), addBonusInfo('A', 0.5, '俠客聯盟')],
-'黎明之戰-華麗優雅的禮服': [addBonusInfo('C', 0.5, '晚禮服'), addBonusInfo('B', 0.5, '歐式古典')],
+* There are three major types of bonus:
+*  - Add a fixed number to each feature (weight applied)
+*  - Replace current clothes features to another one
+*  - Special rules
+*/
+var levelBonus = {
 "I-1-1": [],
 "I-1-2": [],
 "I-1-3": [addBonusInfo('B', 0.25, "中式古典")],
@@ -825,21 +820,8 @@ function addBonusInfo(base, weight, tag) {
 'II-2-7': [addBonusInfo('A', 0.5, "小動物")],
 'II-2-支2': [addBonusInfo('A', 0.5, "中式現代")],
 'II-2-支3': [addBonusInfo('A', 0.5, "婚紗")],
-'死神舞會1-神秘先知': [addBonusInfo('SS', 1, "小動物")],
-'死神舞會2-舞會邀請': [addBonusInfo('SS', 10, "舞者"), addBonusInfo('SS', 3, "印度服飾")],
 '清秀佳人': [addBonusInfo('A', 1, "中式現代")],
 '絕色無雙': [addBonusInfo('A', 1, "中式現代")],
-'保育員面試': [addBonusInfo('S', 1, "小動物")],
-'海邊的比基尼對決！': [addBonusInfo('A', 1, "泳裝")],
-'少女的茶會': [addBonusInfo('SS', 1, "蘿莉塔")],
-'搖滾演唱會': [addBonusInfo('S', 1, "搖滾風")],
-'花田攝影會': [addBonusInfo('A', 1, "碎花")],
-'牛仔的逆襲': [addBonusInfo('B', 1, "牛仔")],
-'雲端和風茶室': [addBonusInfo('S', 1, "和風")],
-'運動飲料的推廣會': [addBonusInfo('S', 1, "運動系")],
-'睡衣兜風派對': [addBonusInfo('SS', 1, "睡衣"), addBonusInfo('SS', 1, "居家服")],
-'雲端漢服聚會': [addBonusInfo('SS', 1, "中式古典")],
-'話劇甄選會': [addBonusInfo('SS', 1, "歐式古典")],
 '協戰: 奧蘭多-彬彬有禮的紳士': [addBonusInfo('A', 1, "中性風")],
 '協戰: 奧蘭多-優雅的晚宴': [addBonusInfo('B', 1, "晚禮服")],
 '協戰: 艾思-經典信鴿舞會': [addBonusInfo('A', 1, "歐式古典")],
@@ -938,12 +920,9 @@ function addBonusInfo(base, weight, tag) {
 "索菲亞1-7": [addBonusInfo('A', 0.25, "歐式古典")],
 "鐘離梓1-3": [addBonusInfo('SS', 1, "兔女郎")],
 };
- 
+
 //少女,公主,其他
 var addSkillsInfo = {
-'荒漠之魅3-大漠之魅':[null,null,['微笑','挑剔','免挑','反挑']],
-'荒漠之魅4-蜃樓傳說':[null,null,['微笑','挑剔','灰姑娘']],
-'荒漠之魅5-命運昭示':[null,null,['微笑','挑剔','沉睡','灰姑娘']],
 'I-1-1': [null,['微笑','挑剔','沉睡','灰姑娘']],
 'I-1-2': [null,['微笑','挑剔','飛吻','聖誕']],
 'I-1-3': [null,['微笑','挑剔','真愛','聖誕']],
@@ -1558,7 +1537,7 @@ var addHintInfo = {
 'I-16-6' :[['必做齒輪牛仔+暗紋牛仔+超能續航'],[''],['']],
 'I-16-7' :[[''],[''],['']],
 'I-16-8' :[[''],[''],['']],
-'I-16-9' :[['必做如雪微醺+名媛腳步，鞋子需要5個16-1公主掉落哼！'],[''],['']],
+'I-16-9' :[['第一次隨便搭，第二次必做如雪微醺+名媛腳步，鞋子需要5個16-1公主掉落！'],[''],['']],
 'I-16-支1' :[[''],[''],['']],
 'I-16-支2' :[[''],[''],['']],
 'I-16-支3' :[[''],[''],['']],
@@ -1648,73 +1627,70 @@ var addHintInfo = {
 '聯盟委託: 10-4' :[[''],['絹蝶翼'],['']],
 '聯盟委託: 10-6' :[[''],['蜜圓'],['']],
 '聯盟委託: 10-7' :[[''],['薄紗外套'],['']],
-'荒漠之魅3-大漠之魅' :[['【南風碧羽】、【紅髮的阿蘇拉】、【荒原的花】可直接過關'],[''],['']],
-'荒漠之魅4-蜃樓傳說' :[['【紅髮的阿蘇拉】、【黑天鵝】可直接過關'],[''],['']],
-'荒漠之魅5-命運昭示' :[['【兩地牽絆】、【森林與麋鹿】可直接過關'],[''],['']],
 };
 
 function parseCriteriaList(criteria) {
-  return {
-    'simple': criteria[0],
-    'cute': criteria[1],
-    'active': criteria[2],
-    'pure': criteria[3],
-    'cool': criteria[4]
-  }
+return {
+'simple': criteria[0],
+'cute': criteria[1],
+'active': criteria[2],
+'pure': criteria[3],
+'cool': criteria[4]
+}
 }
 
 function level(name, criteria) {
-  var filter = null;
-  if (levelFilters[name]) {
-    filter = levelFilters[name];
-  }
-  var bonusFilter = [];
-  if (levelBonus[name]) {
-    for (var i in levelBonus[name]) {
-      bonusFilter.push(levelBonus[name][i]);
-    }
-  }
-  var skills = [];
-  if (addSkillsInfo[name]) {
-    for (var i in addSkillsInfo[name]) {
-      skills.push(addSkillsInfo[name][i]);
-    }
-  }
-  var hint;
-  if(addHintInfo[name]) {
-	hint = addHintInfo[name];
-  }
-  return {
-    name: name, // useful?
-    weight: criteria,
-    filter: filter,
-    bonus: bonusFilter,
-	skills: skills,
-	hint: hint
-  }
+var filter = null;
+if (levelFilters[name]) {
+filter = levelFilters[name];
+}
+var bonusFilter = [];
+if (levelBonus[name]) {
+for (var i in levelBonus[name]) {
+  bonusFilter.push(levelBonus[name][i]);
+}
+}
+var skills = [];
+if (addSkillsInfo[name]) {
+for (var i in addSkillsInfo[name]) {
+  skills.push(addSkillsInfo[name][i]);
+}
+}
+var hint;
+if(addHintInfo[name]) {
+hint = addHintInfo[name];
+}
+return {
+name: name, // useful?
+weight: criteria,
+filter: filter,
+bonus: bonusFilter,
+skills: skills,
+hint: hint
+}
 }
 
 allThemes = function() {
-  var ret = {};
-  for (var theme in extraRaw) {
-    var criteria = extraRaw[theme];
-    ret['活動地圖: ' + theme] = level(theme, parseCriteriaList(criteria));
-  }
-  for (var theme in competitionsRaw) {
-    var criteria = competitionsRaw[theme];
-    ret['競技場: ' + theme] = level(theme, parseCriteriaList(criteria));
-  }
-  for (var theme in tasksRaw) {
-    var criteria = tasksRaw[theme];
-    ret['' + theme] = level(theme, parseCriteriaList(criteria));
-  }
-  for (var theme in levelsRaw) {
-    var criteria = levelsRaw[theme];
-    ret['關卡: ' + theme] = level(theme, parseCriteriaList(criteria));
-  }
-  for (var theme in dreamWeavingRaw) {
-    var criteria = dreamWeavingRaw[theme];
-    ret['織夢人: ' + theme] = level(theme, parseCriteriaList(criteria));
-  }
-  return ret;
+var ret = {};
+for (var theme in extraRaw) {
+var criteria = extraRaw[theme];
+ret['活動地圖: ' + theme] = level(theme, parseCriteriaList(criteria));
+}
+for (var theme in competitionsRaw) {
+var criteria = competitionsRaw[theme];
+ret['競技場: ' + theme] = level(theme, parseCriteriaList(criteria));
+}
+for (var theme in tasksRaw) {
+var criteria = tasksRaw[theme];
+ret['' + theme] = level(theme, parseCriteriaList(criteria));
+}
+for (var theme in levelsRaw) {
+var criteria = levelsRaw[theme];
+ret['關卡: ' + theme] = level(theme, parseCriteriaList(criteria));
+}
+for (var theme in dreamWeavingRaw) {
+var criteria = dreamWeavingRaw[theme];
+ret['織夢人: ' + theme] = level(theme, parseCriteriaList(criteria));
+}
+return ret;
 }();
