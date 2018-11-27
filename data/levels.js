@@ -161,7 +161,7 @@ var tasksRaw = {
 
 //活動關卡，總在最前
 var extraRaw = {
-
+'傾心回憶-手捧花不見了': [1, 0.67, 1.33, 1.33, 1.33],
 };
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
