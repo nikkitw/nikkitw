@@ -162,7 +162,7 @@ var tasksRaw = {
 
 //活動關卡，總在最前
 var extraRaw = {
-'夢幻甜點-甜蜜的邀請函': [-2.67, -1.67, -3.67 , -1, -1],
+'夢幻甜點-星法法的請求': [2.5, 1.5, 3.1 , 1.8, -0.8],
 };
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
