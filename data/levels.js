@@ -161,7 +161,7 @@ var tasksRaw = {
 
 //活動關卡，總在最前
 var extraRaw = {
-'夢幻甜點-法式浪漫的求助': [1.5, -1.5, -2.5 , 2.9, 0.6],
+'夢幻甜點-閃點泡芙的挑戰': [-1.33, -2.5, -1.5 , -3, 0.5],
 };
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
