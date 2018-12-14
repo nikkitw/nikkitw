@@ -250,12 +250,14 @@ function getstrClothes(result){
 function removeNum(str){
 	if (str.indexOf("定")>=0 || str.indexOf("進")>=0) str = str.replace(/[0-9]/g,"");
 	str = str.replace(/聯盟·.*/, "聯盟");
-	str = str.replace("設計圖", "設");
+	str = str.replace("設計圖", "圖");
 	str = str.replace(/活動·.*/, "活動");
 	str = str.replace(/夢境：.*/, "夢境");
 	str = str.replace(/儲值·.*/, "儲值");
 	str = str.replace(/贈送·.*/, "贈送");
 	str = str.replace("店·", "");
+	str = str.replace("元素重構", "重構");
+	str = str.replace(/兌·.*/, "兌");
 	return str;
 }
 
