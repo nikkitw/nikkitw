@@ -39,7 +39,7 @@ Clothes = function(csv) {
     pure: realRating(csv[11], csv[10], theType),
     cool: realRating(csv[12], csv[13], theType),
     tags: csv[14].split(','),
-    source: csv[15].replace(/浪·/g,"").replace(/設·/g,"").replace(/圖/g,"設計圖"),
+    source: csv[15].replace(/抽·/g,"").replace(/設·/g,"").replace(/設·圖/g,"設計圖"),
 	isSuit: csv[16],
 	version: csv[17],
     deps: [],
