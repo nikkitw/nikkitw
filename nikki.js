@@ -954,13 +954,13 @@ function filterClotherHTML(btn){
 			case "設計圖": str = "設計圖"; type = 1;break;
 			case "設計圖染/進": str = "設計圖"; type = 2; break;
 			case "活動": str = "活動·"; type = 2; break;
-			case "夢境": str = "夢境："; type = 2; break;
-			case "迷之屋限定": str = "迷,幻,迷/幻,雲禪,晝夜,縹緲,晝夜/兌·時光,雲禪/兌·臥雲,縹緲/兌·翡翠"; type = -1; break;
-			case "迷之屋限定染/進": str = "迷,幻,迷/幻,雲禪,晝夜,縹緲,晝夜/兌·時光,雲禪/兌·臥雲,縹緲/兌·翡翠"; type = -2; break;
+			case "夢境": str = "夢境·"; type = 2; break;
+			case "謎之屋限定": str = "謎,幻,謎/幻,雲禪,晝夜,縹緲,晝夜/兌·時光,雲禪/兌·臥雲,縹緲/兌·翡翠"; type = -1; break;
+			case "謎之屋限定染/進": str = "謎,幻,謎/幻,雲禪,晝夜,縹緲,晝夜/兌·時光,雲禪/兌·臥雲,縹緲/兌·翡翠"; type = -2; break;
 			case "3星": str = "3"; cls = ".star:first"; type = 1; break;
 			case "4星": str = "4"; cls = ".star:first"; type = 1; break;
 			case "5星": str = "5"; cls = ".star:first"; type = 1; break;
-			case "贈送/簽到": str = "送,簽到"; type = 1; break;
+			case "贈送/簽到": str = "贈送,簽到"; type = 1; break;
 			case "套裝部件": cls = ".issuit:first"; type = 3; break;
 			case "新品": cls = ".version:first"; str=lastVersion; type = 1; break;
 		}
