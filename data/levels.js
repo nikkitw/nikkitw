@@ -162,8 +162,9 @@ var tasksRaw = {
 
 //活動關卡，總在最前
 var extraRaw = {
-'滿天繁星2-蒼龍之腹': [1.33, 1.33, 1.33, 1.0, 0.67],
+'滿天繁星3-月鹿仰頸': [-1.0, -1.33, -1.33, -1.33, 0.67],
 };
+
 
 // all data are presented in order "simple", "cute", "active", "pure", "cool"
 var levelsRaw = {
