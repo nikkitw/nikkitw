@@ -162,7 +162,7 @@ var tasksRaw = {
 
 //活動關卡，總在最前
 var extraRaw = {
-'滿天繁星3-月鹿仰頸': [-1.0, -1.33, -1.33, -1.33, 0.67],
+'滿天繁星4-姻緣之宿': [1.33, 0.67, -1.33, 1.33, 1.0],
 };
 
 
@@ -618,8 +618,9 @@ return bonusInfo(base, weight, tag, false);
 *  - Special rules
 */
 var levelBonus = {
-'鐘樓幻影3-幽靈傳說': [addBonusInfo('B', 0.5, '歐式古典'), addBonusInfo('SS', 0.1, '晚禮服')],
-'鐘樓幻影5-記憶鐘擺': [addBonusInfo('A', 0.5, '冬裝')],
+'滿天繁星4-姻緣之宿': [addBonusInfo('A', 1, '中式現代'), addBonusInfo('A', 1, '中式古典')],
+'滿天繁星5-神鳥為烏': [addBonusInfo('A', 1, '俠客聯盟')],
+'滿天繁星7-諸星歸位': [addBonusInfo('A', 1, '中式現代'), addBonusInfo('A', 1, '中式古典')],
 "I-1-1": [],
 "I-1-2": [],
 "I-1-3": [addBonusInfo('B', 0.25, "中式古典")],
