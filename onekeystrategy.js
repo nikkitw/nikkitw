@@ -252,12 +252,17 @@ function removeNum(str){
 	str = str.replace(/聯盟·.*/, "聯盟");
 	str = str.replace("設計圖", "圖");
 	str = str.replace(/活動·.*/, "活動");
+	str = str.replace(/套裝·.*/, "套裝");
+	str = str.replace("簽到·", "簽");
 	str = str.replace(/夢境·.*/, "夢境");
 	str = str.replace(/儲值·.*/, "儲值");
 	str = str.replace(/贈送·.*/, "贈送");
 	str = str.replace("店·", "");
 	str = str.replace("元素重構", "重構");
+	str = str.replace("時光流轉之庭", "時光流轉");
 	str = str.replace(/兌·.*/, "兌");
+	str = str.replace(/.*公/, "公");
+	str = str.replace(/.*少/, "少");
 	return str;
 }
 
