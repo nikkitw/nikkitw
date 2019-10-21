@@ -1871,24 +1871,28 @@ hint: hint
 }
 }
 
+
 allThemes = function() {
-var ret = {};
-for (var theme in extraRaw) {
-var criteria = extraRaw[theme];
-ret['活動地圖: ' + theme] = level(theme, parseCriteriaList(criteria));
-}
-for (var theme in competitionsRaw) {
-var criteria = competitionsRaw[theme];
-ret['競技場: ' + theme] = level(theme, parseCriteriaList(criteria));
-}
-for (var theme in tasksRaw) {
-var criteria = tasksRaw[theme];
-ret['' + theme] = level(theme, parseCriteriaList(criteria));
-}
-for (var theme in levelsRaw) {
-var criteria = levelsRaw[theme];
-ret['關卡: ' + theme] = level(theme, parseCriteriaList(criteria));
-}
-for (var theme in dreamWeavingRaw) {
-var criteria = dreamWeavingRaw[theme];
-ret['織夢人: ' + theme] = level(theme, parseCriteriaList(criteria));
+  var ret = {};
+  for (var theme in extraRaw) {
+    var criteria = extraRaw[theme];
+    ret['活動地圖: ' + theme] = level(theme, parseCriteriaList(criteria));
+  }
+  for (var theme in competitionsRaw) {
+    var criteria = competitionsRaw[theme];
+    ret['競技場: ' + theme] = level(theme, parseCriteriaList(criteria));
+  }
+  for (var theme in tasksRaw) {
+    var criteria = tasksRaw[theme];
+    ret['' + theme] = level(theme, parseCriteriaList(criteria));
+  }
+  for (var theme in levelsRaw) {
+    var criteria = levelsRaw[theme];
+    ret['關卡: ' + theme] = level(theme, parseCriteriaList(criteria));
+  }
+  for (var theme in dreamWeavingRaw) {
+    var criteria = dreamWeavingRaw[theme];
+    ret['織夢人: ' + theme] = level(theme, parseCriteriaList(criteria));
+  }
+  return ret;
+}();
