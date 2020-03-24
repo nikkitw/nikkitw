@@ -172,7 +172,7 @@ function showStrategy(keywords, suits){
 	
 	$author_sign = $("<div/>").addClass("stgy_author_sign_div");
 	var d = new Date();
-	$author_sign.append(p("nikkiup2u3 One Key Strategy@Black Sublimation", "author_sign_name"));
+	$author_sign.append(p("nikkiup2u3 One Key Strategy@莫默墨陌", "author_sign_name"));
 	$author_sign.append(p("generate at " + (1900+d.getYear()) + "-" + (d.getMonth() + 1) + "-" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes(), "author_sign_name"));
 	$strategy.append($author_sign);
 	
