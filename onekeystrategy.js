@@ -52,9 +52,9 @@ function showStrategy(keywords, suits){
 		$strategy.append($skill_ops);		
 	}
 	
-	var $skill_my = p("推薦攜帶: ", "skill_my");
+	var $skill_my = p("推薦携帶: ", "skill_my");
 	if($("#theme").val().indexOf("競技場") >= 0){
-		$skill_my = p("推薦攜帶: 微笑 飛吻 挑剔 沉睡", "skill_my");
+		$skill_my = p("推薦携帶: 微笑 飛吻 挑剔 沉睡", "skill_my");
 	}
 	$strategy.append($skill_my);
 	
@@ -71,7 +71,7 @@ function showStrategy(keywords, suits){
 		var $hint = p($("#hintInfo").text().replace("過關提示:",""), "hint", "過關提示: ", "hint_tiele");
 		$strategy.append($hint.clone());
 	}
-	else if($("#theme").val().indexOf("競技場") < 0 && $("#theme").val().indexOf("聯盟委託") < 0){
+	else if($("#theme").val().indexOf("競技場") < 0 && $("#theme").val().indexOf("聯盟委托") < 0){
 		var $hint = p("本關暫無過關提示, 若出現F, 請參考失敗後大喵的衣服提示, 或不穿外套進行嘗試", "hint", "過關提示: ", "hint_tiele");
 		$strategy.append($hint);
 	}
@@ -126,16 +126,18 @@ function showStrategy(keywords, suits){
 	}
 	
 	if(keywords != null){
-		$strategy.append(p(getstrClothes(result["手選連身裙"]), "clothes", "手選連身裙", "clothes_category"));
-		$strategy.append(p(getstrClothes(result["手選上衣"]), "clothes", "手選上衣", "clothes_category"));	
-		$strategy.append(p(getstrClothes(result["手選下著"]), "clothes", "手選下著", "clothes_category"));
+		$strategy.append(p(getstrClothes(result["手選連身裙"],'actScore'), "clothes", "手選連身裙", "clothes_category"));
+		$strategy.append(p(getstrClothes(result["手選上衣"],'actScore'), "clothes", "手選上衣", "clothes_category"));	
+		$strategy.append(p(getstrClothes(result["手選下著"],'actScore'), "clothes", "手選下著", "clothes_category"));
 	}
 	for (var c in category){
 		var name = category[c];
 		if(name.indexOf("飾品")>=0)
 			continue;
 		if (result[name]){
-			$strategy.append(p(getstrClothes(result[name]), "clothes", name, "clothes_category"));
+			var categoryContent = p(getstrClothes(result[name],'actScore'), "clothes", name, "clothes_category");
+			if (isGrey(name,result)) categoryContent.addClass("stgy_grey");
+			$strategy.append(categoryContent);
 		}
 	}
 	
@@ -146,16 +148,32 @@ function showStrategy(keywords, suits){
 		if(name.indexOf("飾品")<0)
 			continue;
 		if (result[name]) {
-			var categoryContent = p(getstrClothes(result[name]), "clothes", name, "clothes_category");
+			var categoryContent = p(getstrClothes(result[name],'actScore'), "clothes", name, "clothes_category");
 			if (isGrey(name,result)) categoryContent.addClass("stgy_grey");
 			$strategy.append(categoryContent);
 		}
 	}
-
+	
+	if (result["range"]){
+		$strategy.append(p("————————以下必帶一件————————", "divide"));
+		
+		for (var i in result["range"]){
+			var clo = result["range"][i];
+			var comp = result[clo.type.type][0];
+			clo.diffScore = actScore(clo) - ( isGrey(clo.type.type,result) ? isGrey(clo.type.type,result) : actScore(comp) );
+		}
+		result["range"].sort(function(a,b){return b.diffScore - a.diffScore});
+		
+		var categoryContent = $("<p/>");
+		categoryContent.append(pspan("必帶 : ", "hint_tiele"));
+		categoryContent.append(getstrClothes(result["range"],'diffScore'));
+		$strategy.append(categoryContent);
+	}
+	
 	$author_sign = $("<div/>").addClass("stgy_author_sign_div");
 	var d = new Date();
-	$author_sign.append(p("nikkiup2u3 One Key Strategy@莫默墨陌", "author_sign_name"));
-	$author_sign.append(p("generate in " + (1900+d.getYear()) + "-" + (d.getMonth() + 1) + "-" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes(), "author_sign_name"));
+	$author_sign.append(p("nikkiup2u3 One Key Strategy@Black Sublimation", "author_sign_name"));
+	$author_sign.append(p("generate at " + (1900+d.getYear()) + "-" + (d.getMonth() + 1) + "-" + d.getDate() + " " + d.getHours() + ":" + d.getMinutes(), "author_sign_name"));
 	$strategy.append($author_sign);
 	
 	$("#StrategyInfo").empty().append($strategy);
@@ -202,7 +220,7 @@ function getStrCriteria(filters){
 	strCriteria += " : ";
 	filters["pure"] >= 0 ? strCriteria += "清純" : strCriteria += "性感";
 	strCriteria += " : ";
-	filters["cool"] >= 0 ? strCriteria += "清涼" : strCriteria += "保暖";
+	filters["cool"] >= 0 ? strCriteria += "清凉" : strCriteria += "保暖";
 	strCriteria += " ≈ ";
 	filters["simple"] >= 0 ? strCriteria += filters["simple"] : strCriteria += -filters["simple"];
 	strCriteria += " : ";
@@ -229,23 +247,41 @@ function getstrTag(filters){
 	return str;
 }
 
-function getstrClothes(result){
+function getstrClothes(result, scoreFunction){
 	if(result == null || result.length == 0)
 		return " : 無";
 	var str = " :";
 	var max = 5;
 	for(var i in result){
 		if(max > 0){
-			str += " " + result[i].name + "「" + actScore(result[i]) + " " + removeNum(result[i].source) + "」" + ">";		
+			str += " " + result[i].name + "「" + eval(scoreFunction+'(result[i])') + " " + result[i].src_short /*removeNum(result[i].source)*/ + "」" + ">";		
 			max--;
 		}
 		else if(result[i].source.indexOf("少") >=0 || result[i].source.indexOf("公") >= 0 || result[i].source.indexOf("店") >= 0 || result[i].source.indexOf("送") >= 0 ){
-			str += "> " + result[i].name + "「" + actScore(result[i]) + " " + removeNum(result[i].source) + "」" + " ";
+			str += "> " + result[i].name + "「" + eval(scoreFunction+'(result[i])') + " " + result[i].src_short /*removeNum(result[i].source)*/ + "」" + " ";
 			break;
 		}
 	}
 	 return str.slice(0, str.length-1);
 }
+
+/*function getstrClothes(result){
+	if(result == null || result.length == 0)
+		return " : 無";
+	var str = " :";
+	var max = 5;
+	for(var i in result){
+		if(max > 0){
+			str += " " + result[i].name + "「" + actScore(result[i]) + " " + result[i].src_short+ "」" + ">";		
+			max--;
+		}
+		else if(result[i].source.indexOf("少") >=0 || result[i].source.indexOf("公") >= 0 || result[i].source.indexOf("店") >= 0 || result[i].source.indexOf("送") >= 0 ){
+			str += "> " + result[i].name + "「" + actScore(result[i]) + " " + result[i].src_short+ "」" + " ";
+			break;
+		}
+	}
+	 return str.slice(0, str.length-1);
+}*/
 
 function removeNum(str){
 	if (str.indexOf("定")>=0 || str.indexOf("進")>=0) str = str.replace(/[0-9]/g,"");
@@ -262,12 +298,15 @@ function removeNum(str){
 	str = str.replace("時光流轉之庭", "時光流轉");
 	str = str.replace(/兌·.*/, "兌");
 	str = str.replace(/.*公/, "公");
-	str = str.replace(/.*少/, "少");
-	return str;
+	str = str.replace(/.*少/, "少");	return str;
 }
 
 function actScore(obj){
 	return (obj.type.mainType=='飾品') ? (uiFilter["acc9"] ? Math.round(accSumScore(obj,9)) : Math.round(accSumScore(obj,accCateNum))) : obj.sumScore;
+}
+
+function diffScore(obj){
+	return obj.diffScore;
 }
 
 function isGrey(c,result){
@@ -283,9 +322,9 @@ function isGrey(c,result){
 				}
 			}
 			if($.inArray(c, repelCates[i])==0){
-				if (sumFirst<sumOthers) return true;
+				if (sumFirst<sumOthers) return sumOthers;
 			}else if($.inArray(c, repelCates[i])>0){
-				if (sumOthers<sumFirst) return true;
+				if (sumOthers<sumFirst) return sumFirst;
 			}
 		}
 	}
@@ -294,33 +333,6 @@ function isGrey(c,result){
 
 function initOnekey(){
 	$("#onekey").click(function() {
-		$("#StrategyInfo").show();
 		showStrategy();
-		if($("#onekey").text().indexOf('收起')>=0){
-			$("#StrategyInfo").hide();
-			if(uiFilter["toulan"]) $("#onekey").text("偷懶攻略");
-			else $("#onekey").text("一鍵攻略");
-		}
-		else {
-			$("#StrategyInfo").show();
-			$("#onekey").text("收起攻略");
-		}
 	});
 }
-
-var stgy_rescnt=4;
-var stgy_showall=false;
-function addonekey(){
-	stgy_rescnt+=1;
-	showStrategy();
-}
-function minonekey(){
-	stgy_rescnt=Math.max(1,stgy_rescnt-1);
-	showStrategy();
-}
-function onekeyshowall(){
-	if (stgy_showall){stgy_showall=false;}
-	else{stgy_showall=true;}
-	showStrategy();
-}
-
