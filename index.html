@@ -20,7 +20,7 @@
 		<script type='text/javascript' charset="UTF-8" src="tool.js"></script> 
 		<script type='text/javascript' charset="UTF-8" src='data/wardrobe.js'></script> 
 		<script type='text/javascript' charset="UTF-8" src='scoring.js'></script> 
-		<script type='text/javascript' charset="UTF-8" src='data/levels.js'></script> 
+		<script type='text/javascript' charset="UTF-8" src='data/levels2.js'></script> 
 		<script type='text/javascript' charset="UTF-8" src='data/flist.js'></script> 
 		<script type='text/javascript' charset="UTF-8" src='model.js'></script> 
 		<script type='text/javascript' charset="UTF-8" src='data/pattern.js'></script> 
@@ -30,17 +30,8 @@
 		<script type='text/javascript' charset="UTF-8" src='onekeystrategy.js'></script>
 		<script type='text/javascript' charset="UTF-8" src='clock.js'></script> 
 		<script type='text/javascript' charset="UTF-8" src='sharewardrobe.js'></script> 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122120666-2"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-122120666-2');
-	</script>
 	</head> 
-	<body>
+	<body> 
 	<div class="FloatMenu"> 
 		<span><a href="#top" ><i class="fa fa-arrow-up fa-fw"></i></a></span><br>
 		<span><a href="https://nikkitw.github.io/BaGua/" target="framemain" onclick="gotop()"><i class="fa fa-home fa-fw"></i></a></span><br>
@@ -147,10 +138,11 @@
 		04.05 衣櫃新增｢青鳶緣」<br/>
 		04.24 衣櫃新增至v5.3.0<br/>
 		07.26 更新「活動·迪士尼公主」<br/>
+		08.08 衣櫃新增至v5.6.0<br/>
 		<br/>
 	</div>
-		2019.08更新<br/>
-		08.08 衣櫃新增至v5.6.0<br/>
+		2020.04更新<br/>
+		04.27 衣櫃新增至v5.12.0<br/>
 		<hr/>
 		溫馨提醒：<br/>	
 		1.因台版進度落後陸版，有些過關提示有「別穿外套！但新外套可以」之類，請無視「新外套可以」，這不一定適用台版！<br/>
@@ -164,6 +156,7 @@
 		<hr/>
 		回報衣服錯誤、F品的聯絡處：<br/>
 		<a href="https://www.facebook.com/%E5%A5%87%E8%BF%B9%E6%9A%96%E6%9A%96%E6%94%BB%E7%95%A5%E5%85%AB%E5%8D%A6%E6%A8%93-390284231325632/" target="_blank">FB粉絲專頁</a>、<a href="https://home.gamer.com.tw/creationDetail.php?sn=3432154" target="_blank">巴哈</a>
+		<br/>
 		<br/>
 	<a href="#" id="show_history">查看歷史更新</a><br/>
 
@@ -269,8 +262,8 @@
 								</div>
 							</div><!-- facet -->
 							<div class="fliter_option clear">
-								<div class="checkbox"><label><input type="checkbox" class="fliter" value="own" checked /> 擁有<span id='inventoryCount'/></label></div>
-								<div class="checkbox"><label><input type="checkbox" class="fliter" value="missing" checked /> 沒有</label></div>
+								<div class="checkbox"><label><input type="checkbox" class="fliter" value="own" style="color:#00A7E1" checked /> 擁有<span id='inventoryCount'/></label></div>
+								<div class="checkbox"><label><input type="checkbox" class="fliter" value="missing" style="color:#00A7E1" checked /> 沒有</label></div>
 								<div class="checkbox"><label><input type="checkbox" id="searchResultCheck" onclick="toggleSearchResult()" checked /> 搜索</label></div>
 								<a href="#" class = "showmore" style="display:inline-block;cursor:pointer">↓顯示全部衣服↓</a>
 							</div><!-- fliter_option -->
@@ -316,7 +309,7 @@
 		</div><!-- top -->
 		<hr>
 		<div id = 'searchResult'>
-			<input type="text" id="searchResultInput" class="btn-sm" placeholder="輸入名字搜索" /><button class="btn btn-default btn-sm" onclick="searchResult()">搜索</button><button class="btn btn-default btn-sm" id="searchResultMode">→衣櫃</button>
+			<input type="text" id="searchResultInput" class="btn-sm" placeholder="輸入名字搜索" /><button class="btn btn-default btn-sm blue3" onclick="searchResult()">搜索</button><button class="btn btn-default btn-sm blue3" id="searchResultMode">→衣櫃</button>
 			<div id='searchResultList' width="100%"></div>
 		<hr>
 		</div>
@@ -337,14 +330,25 @@
 		  <button onClick="doImport()">導入</button>
 		</div>
 		<hr>
+		<!-- <p>我擁有的服裝 （複製衣櫥文字方塊內容以備份衣櫥）</p> -->
+		<!-- <textarea id="myClothes" rows=10 style="width:60%"></textarea><br/> -->
+		<!-- <p style="width:60%; display:none">衣櫃數量記錄 （複製衣櫥文字方塊內容以備份衣櫥）</p> -->
+		<!-- <textarea id="myClothesNum" rows=10 style="width:60%; display:none"></textarea> -->
+		<!-- <br/> -->
+		<!-- <button onClick="loadCustomInventory()">恢復備份</button> -->
+		<!-- <button onClick="exportCustomInventory()">產生備份檔</button> -->
+		<!-- <a id='clothesDownload'></a> -->
+		<!-- <br/> -->
 		<p>我擁有的服裝 （複製衣櫥文字方塊內容以備份衣櫥）</p>
 		<textarea id="myClothes" rows=10 style="width:60%"></textarea>
 		<p style="width:60%; display:none">衣櫃數量記錄 （複製衣櫥文字方塊內容以備份衣櫥）</p>
 		<textarea id="myClothesNum" rows=10 style="width:60%; display:none"></textarea>
 		<br/>
+		<button onClick="exportCustomInventory()">產生備份檔</button>
+		<a id='clothesDownload'></a>
 		<p>自訂檔案名稱：<input id="inputFileNameToSaveAs"></input><button onclick="saveTextAsFile()">儲存檔案</button></p>
 		<p>選擇檔案：</p>
-		<input type="file" id="fileToLoad">
+		<input type="file" id="fileToLoad"></input>
 		<button onclick="loadFileAsText()">讀取檔案</button>
 		<br/>
 		<button onClick="loadCustomInventory()">恢復備份</button>
