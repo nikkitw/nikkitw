@@ -941,7 +941,7 @@ var levelBonus = {
 'II-6-支2': [addBonusInfo('SS', 0.5, "蘿莉塔")],
 'II-6-支3': [addBonusInfo('S', 0.5, "小動物")],
 'II-7-6': [addBonusInfo('B', 0.5, "歐式古典"), addBonusInfo('B', 0.5, "俠客聯盟")],
-'II-7-支1': [addBonusInfo('B', 0.5, "民族風")],
+// 'II-7-支1': [addBonusInfo('B', 0.5, "民族風")],
 'II-7-支3': [addBonusInfo('C', 0.5, "中式古典")],
 'II-8-2': [addBonusInfo('SS', 0.1, "未來系")],
 'II-8-3': [addBonusInfo('C', 0.5, "晚禮服")],
